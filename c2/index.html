@@ -375,6 +375,10 @@
         {
           guia: "Chegou por um vídeo e quer mais?",
           botoes: [["🎬", "Mais treinos como esse", "https://www.tiktok.com/@atefalhar"]]
+        },
+        {
+          guia: "Os achadinhos de academia caem no grupo 👇",
+          botoes: [["🏋️", "Achadinho Total — o grupo", GRUPO.total]]
         }
       ],
       produtos: []
@@ -643,8 +647,18 @@
     desenhar(atual);
   });
 
+  var PORTAS = {
+    "oachadinho": "c1",   // Achadinho Make
+    "meulivro": "c2",     // Sem Anestesia
+    "achadinhochef": "c5",
+    "pagomenos": "c6",    // Fatura Chora
+    "achadinhodehoje": "c7"
+  };
+  var doHost = PORTAS[location.hostname.split(".")[0]];
+
   var doCaminho = (location.pathname.match(/\/(c[1-9])\/?$/) || [])[1];
-  var pedido = doCaminho || new URLSearchParams(location.search).get("c");
+  var pedido = doHost || doCaminho ||
+              new URLSearchParams(location.search).get("c");
   if (pedido) {
     var achado = Object.keys(CANAIS).filter(function (k) {
       return CANAIS[k].banco === pedido || k === pedido;
