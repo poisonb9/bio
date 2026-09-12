@@ -224,11 +224,6 @@
 </style>
 
 <div class="envelope">
-  <section class="previa">
-    <h2>prévia &middot; não vai ao ar</h2>
-    <p>A página é <strong>uma por canal</strong>. Troque aqui para ver cada uma. No ar, cada canal tem o seu endereço e esta caixa não existe.</p>
-    <div class="abas" id="abas"></div>
-  </section>
 
   <header class="topo">
     <div class="avatar" id="avatar"></div>
@@ -632,11 +627,10 @@
       a.setAttribute("aria-pressed", String(a.dataset.canal === chave));
     });
 
-    medir("visita", { canal: c.banco });
   }
 
   var abas = document.getElementById("abas");
-  Object.keys(CANAIS).forEach(function (chave) {
+  abas && Object.keys(CANAIS).forEach(function (chave) {
     var b = el("button", "aba", CANAIS[chave].nome);
     b.type = "button";
     b.dataset.canal = chave;
@@ -649,6 +643,16 @@
     desenhar(atual);
   });
 
+  var pedido = new URLSearchParams(location.search).get("c");
+  if (pedido) {
+    var achado = Object.keys(CANAIS).filter(function (k) {
+      return CANAIS[k].banco === pedido || k === pedido;
+    })[0];
+    if (achado) atual = achado;
+  }
+
   desenhar(atual);
+
+  medir("visita", { canal: CANAIS[atual].banco });
 })();
 </script>
