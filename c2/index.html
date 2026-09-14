@@ -300,9 +300,18 @@
   
   .foto img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .corpo { flex: 1; padding: 10px; display: flex; flex-direction: column; gap: 5px; }
+  
   .nome { font-size: 13px; font-weight: 600; line-height: 1.3; }
   .preco { font-family: "Archivo Black", system-ui, sans-serif; font-size: 17px; color: var(--acento); letter-spacing: -.01em; }
   
+  .foto { position: relative; }
+  .caiu {
+    position: absolute; top: 7px; left: 7px; z-index: 1;
+    background: var(--acento); color: #fff;
+    font: 700 11px/1 var(--fonte-mono, monospace);
+    padding: 5px 7px; border-radius: 999px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.18);
+  }
   .visto-em {
     margin-top: auto;
     font-family: "JetBrains Mono", ui-monospace, monospace;
@@ -396,7 +405,9 @@
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4mMwDVCN0Aep3TRj7X03WkANChY5TtwP700CcQT5xva1KXXck3xjoI4kDIeu1MaXWg81PM6uIKzusDNcREevdiyfuLdRhhqn36m1iM6H0qXEEgAwWoSBxRef37zvBv4nsDTlTO1RFCbdKe82YDYJV6NKM6iRZdrgefoAwdIlsemEFmtmOCR1t77b3usJodJOjLkqW5SewYP2A6OHvORU7uo1Z3mUQJu3ifN26Re5GWFUvLycto6AL0DoC2fVEBz1sMWjUoerwFtdxa5nCOpWzFUXmeuyNdij10RlEbLgAXXCIS7Q3cP2vBVpB9lE095wIaHZFtcm61Lgw8UYzujXbX7ovA7904nTp8Aq7G3zqH9d3NzAnbL5MQReVbjhZG2RRJWWJZ9uEbEwqUH8yr3MmgZ4GvzARxA3DNvmpqHLlaU551qTYhPhIaJFujJxQkkKbly1K2bXVhl5ursgRYe7s5ovdXybEgkh1VDamrhHyir2s28CCoT5yknHM2dB1m9HXorDCQ8wPxN44IXubooF0uKI3E5xE1naS3RZxWfPmIALF0iIUrsRsLku3v9g9LOHWu4HX51W1N8DlARcOOzCx6FXS1qpw7FjyFMU9YksIlsTRVj2Nxz7fZGwsT9a8JnFQulpFEWwD5Lc4Mlx6ysGu0sCfHApP0OiVQYucJjSWAoqfmVvZcFUf3jYl9aN2zki24bUUfaVMUTgqU",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/Sb216e96b4ca143f8be608fa36e57455aa.jpg",
       "queda": 18.1,
-      "vendas": 11057
+      "vendas": 11057,
+      "desde": "13/09",
+      "pontos": 2
     },
     {
       "nome": "Kit de maquiagem com potes e esponjas de pó",
@@ -406,7 +417,9 @@
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4kGvtT65awcaYaysmiHSzp5d2L6upJyvGY0KLSOp0amBHGZ7Ns1ghIZgZ7uQfUEtxmFln4i6omTFmOUZmpuHgzHAgFObAWPDz2Yv6o1oehZSziPM91kfYIDNP5InACZi2cQsmQn8fscQMO33YshA2GAgjEr2tJgE9LBjiunBmQvdRunET47jQ2g7KAnlCK2Dyv5W5Fx5uaEXL26UbLGM7i1AMmvgWeP62nWEDel36Cmf6Zkebh6uyVMQyt7z4oAPvtJn86z33Mibb8DkjuZ0aohezASVs6eJiMFv0Gvtq9hnZtiRZMK6oF7dCeUCswxzYeufkjiAeuxHj7urNgSn7uTzNhoqR0HxSHhe1uniocU1kbZFUBO85HOCvX221T5F5NJSuyyNQIjwsq98E9AlFEoiGRaJkytlFNIiEHeHHZBSHbkyEDHVqxgS3psaqfNZHkNobwWZeczMh4LYBR0p6v02iXb84UtLlq5HgHIB4W5jLUmClJmvQcZtrfZAbj88lpboN07Hk8x20a0mXsvxAAFQfvMjhTd60jlWeu6QyvnCIULBpUaCY0Jt2GPH2CaXD8ABYzb9P1htzlpsithUFDRlR0b7nVYoyRQsdwIdvz0tpOWyIsdCijWpCRfCJucF0Qwi9ieZvL1CaAaIvB6mDO1Bok8pLfum8jcnoVKmT1KxPybpC8LcJTDJM0nMZZ9ZAgdNF3Gqv4188g",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/Sda67768c38b7440ebb8365d9c1969a22E.jpg",
       "queda": 15.4,
-      "vendas": 6141
+      "vendas": 6141,
+      "desde": "13/09",
+      "pontos": 2
     },
     {
       "nome": "Kit de batons líquidos de longa duração",
@@ -416,7 +429,9 @@
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4khRmB2X13dfIli3mSvZZMTIue7YuXSszZFPVvEfyG1TAdYc98DvhMHsRYNJ8udsYWhjAKYeUb88OgPnfM96E51OhLX0DQu7XVh8sCTshXBZXBWBvr1mSoEArarGaqDKpfhkC9ecHr3J0ZsmBY9V71R5l3lPn0Hb6N5OCzak2sLiHM5AxweUdcTX10gdegD1IkHvcwN13Q9f27cGI7TYpLEstOKXuJ7vDJUwiwiEl9UQROxSwm8ogd0l1K7QYvDJxoVUVD3065GGakpmTmlS2SbJOwJYQy9d4HzLUTe3Lm9kVcxirZTAaWA3JD9urJeG0wkf3EiJnQrf4zrHDLXkFeKtCHlj5M8Ml185Vwxp5oaV86cvbYAxiD6Gy8aDeFOIZCdrVVgublg6wYQkhdD5kAsPfNyzh9FfMv9uGhJvMYB4FfSgZ95I7veeUHnJ6HKTU2ZmVbFLiWK3cNfJaRaN8zS4pRklbsqM85k8N978qBO3lmItwWJCqgsUxBQw6tiQSw38YmuHjv6BtU9l48HXGS1C8p3mhBDln84FLSXWkk9uvArOVYlSpPM8Tl22f3p3ioFRqKjaooAWXHF2Snlb8jCgAkFoco4pELgXLwdQcXfsqunTXKq5IeVFtBVGnqgW4CeksYhLAwBsMJxtdBPcGboF37qvYt85UcvqY9YjSgzPmfuiCg8UwWNsOyNxvfiZ44IfeGS11H3HXa",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/S725007040365409cae98f659c4443eacJ.jpg",
       "queda": 10.2,
-      "vendas": 4818
+      "vendas": 4818,
+      "desde": "13/09",
+      "pontos": 2
     },
     {
       "nome": "Estojo de maquiagem de pelúcia de urso",
@@ -426,7 +441,9 @@
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4otk9m50y7Jjw8VGNPeJcBYsyLpQQJmkccRjLEukITYZ2PZUeS7nPuny3zFNBIctFYFjew0HBJA1Jtg6FwG6kuowby9C5rlAgLDFcHfaRpVNIzicNUhKRPblBdEOdXNepSPEu8T86zqUhwjpUmMqCorzcJ5tqG0FskDyxv5BJKFs1wSY7AEefXhQt5gWWjsL2ZsK1IsHj91MEyXlD25xTQOGW68FBCTORxc6VhyHF3OROJYYDIbalJz6OcTiynH8VSHqFQWlRj503PVAR5jhIXGpcTovPP367PH7r2TNQvDsMHbqLRAC5b5olHe8TbYQActRwuR9bSzv8bBVw8dHn1fkKIGWIWiME3PKXVgK9yMY0WoqhuzUFRRqsLy3wAlFQWmtdWvJoSOC1pDlqB3PdAsdOxS2OisArTZSJCSw3whgxA2rgEvap4mmXul4ogaI2s8zimZpM84F7RqZCwe5mhFEUN60KB8YHmo8uWVU6UUmN68hNUQZ37diWrEQfLmXUSgAyqgk1T5d6mP10pOD5RsdXKyncQ9FwOhaYEP3Dmu2BA4Ws2g536SLvGSAdxgZKZZJikXAZL59md1D2YbvbvKjW2XGOCkg8JFLwCPz2P4LTCAx7NeE7NvKWTUDnWigyyOmnPWf6QtudLA8WxS9kOiy9UnF6OfEhWnkbCHGtpvdBRisIUkd56GqLJcgP6Uo1bLMdT6yuMX8ss",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/S60abf67020ea485ea8763eb17d1fe48cG.png",
       "queda": 8.1,
-      "vendas": 19445
+      "vendas": 19445,
+      "desde": "12/09",
+      "pontos": 3
     }
   ],
   "cozinha.internacional": [
@@ -438,7 +455,9 @@
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4mqpDqNZZUGpAmNoQDodSLoo9pN6jIrDtk7Xn35ZCvXKppDn8lDwVCy0sP25ULvT5vFp1fpR1vqROMmnPzTBmMAOshkLfpj76JoEv12pGqB2NufnLxPsXDQtyEP7dO5xmOVgKmTXeTYPcgjMmIDuYKi16znIEc3UHCdNZsNRfqNfDF6KZAC8gvgIbi1EinkaI1OehVLnBI0XXSucCLjUEFkCTScJANipGpBQ1zSIdepbl3JoX0s9oxB19v8QfQ3i6aE8vWZ3StHMjZpIf8RfDdT933CLZAMOaYxlJnRSK814EZxGl2iqMbIsBfGeHFYgOd2E9tqSp3fE2ncTv8edEEFeAWTb4Gz719TdvtSEf5NI72QkrURtwB0zaBbLIq2dwahLY5GWSdeROuO6G6i2IvKlX3nSH1HAkS3HQA4VoMgggMFW5rC61BhPHTOG12TrjwKKxfzsSlUQreqkts71ZSp8XBYo0mO8aJnYugrz71sYjWV7nTUX2YMhHMGvS63lfYGy00JgBbh0KJBCXhRUBxifPddN35zbWm42mv9qjdCTZfn0od7ioRHj2V6hZkIl2H5IDtJ6zVfWaLbLfOVPwyTGPeVElccnZ1cqmhNDgfLtPzGeGReMOgylhKofZgneuU4R7bQzh1FEqyemuPID297VRK9rN0tem73bdsC3hsg9ekD6dDH8m6Kw5AM4RxyVz3tuOczFNZxcYC",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/Sb4db71d49a824de99d8587697f1b63f03.jpg",
       "queda": 12.2,
-      "vendas": 4202
+      "vendas": 4202,
+      "desde": "12/09",
+      "pontos": 3
     },
     {
       "nome": "Descascador de legumes 3 em 1 de inox",
@@ -448,7 +467,9 @@
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4mMT54XssoMBzE4wgK0FfnPZfqXosjHuWAep8mZIrPmI0rP2unOd9v7eyQbRV0uRT72hqAyN8oRSltKH3CLjJezpdMQ4166kwL4TMTQSP5FJVbaon7TTSWlSJO5ofgcMgCG8hSBcCtiFWuJ3YFGZbZ2mfBcbVlMPxmGXHLzPmhuytwLMptukxTdWYdgUMdIHgulTZhAcylstZdLS520yv5TSAuVhRAYZtxE5lY63SJH4AZcYpfJd3q83wwroSz1fSRPU9G6NknYg8UOoXAuw3urPWdv81Fx2QfQDl9LCBmWhEMNfOhO0uYegX3FROqTHCR911KWRvym7b39nAV3GKO7MU7H4x0tkaYbUXeAwoffeW4MXouokggGFZ9UpTqTUk0XEhH01iY4TAT2HJvwNPQaeVQWu5j1qXJ2TRNcysJJf6Y6QSbKRKzmjdsasUDYd2d50fkBPUvuGl0gjJEfUuWmKBvxqbH7vL5HgS6kQULoifs7AGoFRV6iRwIjRGXBkc4jMT6Y4bE7pkgLf5bsOArNSXjlZXa177NmHBcwzeu7poFKu9DaYwWVqXt7FvEh1wLkX6Gnu5uXKFX29q60FXb9PzTWmaD4GDIp3GceHUpNAitA0PBTFdF4rmohP1NV9i78O0aaiO3axxtJPTNN4EEh6Dck7WXPeIc0ed3Rv6VcAoQO8If85c6xapKvLahie6sBFOeHX8ndDJS",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/Sd45b9f6b636c45fe87724af18eacadcfC.jpg",
       "queda": 10.8,
-      "vendas": 8261
+      "vendas": 8261,
+      "desde": "13/09",
+      "pontos": 2
     },
     {
       "nome": "Suporte para queijo fatiado de geladeira",
@@ -458,7 +479,9 @@
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4Fk8nOsCaGMWUVvrm7gHcnyjJoAoYJqgboOTk9bhhjq1vPTpFygMKSsWX6Whydw0MAuqCtxuXXZoaTH62Us4eWiDYC5rSds9SKUKcbWdZGQaiU0g5f0fMDieScwfLpCjiugcFpVNphURDvrFnSfDQRsiKEeK0OqyNqiswGXkbJ6G8h9dJwnltm0WXNqTP9GMqHlkX4BjbR8ZQiWepX0WEcQi4sGuSMLqA868bPfTQEk7qy6d5rGsSTBr6mVpkD37WMscy87xZ6lRJCJvJzbmD8gfW1xowyuT8vNOHetRH8IVwvAuBaFLewyRnhztC3rxcVgiOTvsMWNw8pDXpy0YOYGNpHhT0F5dhjTd3n2O93PSWxWrx81fIneK7apCDrxgKD2B0ZsyFiy8Pwfx0fULjFNcnc2mhPHfsWfAdFFmn0iFAqgfBWxpU4lFGzQgXdEWzDqGx0hdP663Kjg0A7EBNe3pibyDfD75xlxD9DHxmUGSCEJuAAxHJlAgKnGuT42gTcgHHk6FWR7OZTJBZI3AXH3VWrLcLRK8qzpodYF5CpbvMWfiad8pIwkrdar1KmiyI1f7s7UvMvSBuwNYGIZ441sCF6JM5o2R2jYebdKIC8Cn6hhbj0fRPowo5xFuEXFZ5AEmKljE3gEpQGNWFeUnyGqIz11sOwAbR6vene2jBjtoNdwXinV2Dgj4LozOyUeTfcLLfsLgEwY8BO",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/Sd174449252e846498e6a112a9f3506a6s.jpg",
       "queda": 8.8,
-      "vendas": 1453
+      "vendas": 1453,
+      "desde": "13/09",
+      "pontos": 2
     },
     {
       "nome": "Suporte magnético para porta de lavadora",
@@ -468,7 +491,9 @@
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4m4zWgSQhBiv1oXvhWIjon5CN6hmtXUTfzXUdwnxyuHCO1uazE884Dr2UpX6gYPP6GW7869c6kQkxYipXPgBffoaFAejd7QJPOkQ1pwDOIG1IcbxHiEkdpXlt5RlYnk0T1K17oEqQqHgs8ipzDFw61qFjfuLV5vgpHgOiuVDfqP9UdjHYbG1MFxS3L8jCnxqyTAizKZRpk9u8GAzPheg1uzkvhdud2bjWwRSNlbBJYc6DhN8yTppgA6mp6r7mGqqQ9T87etrM1AYWwHFC5onF0btt3DxIYSxK73TAl1twOZNRc6boAaqGt3pbgulkdQYyE4mEyPekrLckKKtgNbQ3okLj6QxwNXyM0R4M8OFNKzExVnqwxVe1NM0fo9e2w9Cqr1asDshIrmczXwrsP6NqQJQljvGnWyjbi4MsEUNHoLp9diuyMtq1Ng5FjNXHHmj0XfVCiU1fsnx7yRNdRMffy99mxwtMcTWih5Yyx9EZLBCEF08Ts68G7dNJtuo1IdQPZNoy3gavBBrnOkaP7Bxt4Xst9ZI8TLHD2PIpRL5S6Js2DNFarJc4AXrJyPmpfiEWuhQagytm7TA000qwslFmJdOdkGqI61LvLPAeUQI7IWq5Z2Wd4Ab1ZUqyaTMtq6DPrjzc5fZLa8BQuZNlFmymEyPPaT46wr4oSM2HR6siHSf2jmjDUWyaTt9iMnQbGTPMsp5BkobAb4TvI",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/S0f511ec9b23546f4842d9a28dd47812bZ.jpg",
       "queda": 8.3,
-      "vendas": 4117
+      "vendas": 4117,
+      "desde": "12/09",
+      "pontos": 3
     }
   ],
   "fatura.chora": [
@@ -480,7 +505,9 @@
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4m6LfR5xd5vp69TYrlkKX75I3eZdgMSZPmsMTzuQpog1rB2zoHePGEklYtjvW5FjjwiLTxncUCleJ9ewYs93nHZltPyHXAwanwOAXFtf8YQ24q1sWI2vfQQXJnlVIvP5EcSiJAQ75ZAgacFfzOfig3wqaJCdrRucEuYMX36TLz3K1B05w5zfpHEgYPvzkhrceOqxOHiPI8QM8SiO49XpOvydeCcKkCV2eplEiRwbs1t8u7K9F40JCN87jDDSlPKUzSaAQLyBSBeA4wA4wpZgJIeyfBp3S3Qvo9eXS3f3YU3z1Om8kO3ebcmlFYMk8Qf58UrVE2ipqBSnvSsCMz1548BIIqqXukJZ2IOwQjbIrcawx57HMK9Gn9yrTDRD9PI9jAPbTLeRrcbcEogmgj1tnVBwdbknHne4X3v6wKtZ2wXN7LYS14Ss5Y1xnZpejh2AMNawPyQ1sbPdfWLzIG5UQ3Y7oK3WUyoGSRlPCcZUain2vbNAWrIIdDodEYIoMWF4TgW0hknAv1qyTGZzKUDAfkgxHkNTOkZcVXrhwLrCg4yU6B3sEZolGn3iM9C7gbGrGmTeexoKmb8IkoR5XlZFhbqVtMc05iTQ5K4h8be00zopC2Y6dmrBZg241tORddmprNNsSoQuoEktIG55YB9ceIaB2jr4mozeC1ZKSQcY8tLiU0TCkLpUVumkxYD8LiIKp3rvWD2cTFrtsH",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/S29b85af05bbf4b3ca87db66aeb5757eaz.jpg",
       "queda": 11.7,
-      "vendas": 4521
+      "vendas": 4521,
+      "desde": "13/09",
+      "pontos": 2
     },
     {
       "nome": "Relógio masculino PAAZOMU para estudantes",
@@ -490,7 +517,9 @@
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4EvbZz7j08Mfxs5gTEL9lcFgFp3K4dFolrTAP9AJjqTuwib9LHEkG7DS5HxeP6oSH6nf2yDgnT3HQqssrHYrIagK6LsA4msaz62dQlRYOb6y8DrtcTwRvaJHVfjm2QyncZmflt9roAucaTju1LOJDaJslBSjOUQLW5OJfchyIdFpqS86lW44XNiaAz4APaGONApyyR50ggz5jzjGvdvB7BqQ5ocx3V0UObRYKdwzuNyOJb7HWINrvkf8vXakJySdOdKPJ8sKQpu0PRwAINzZR81KHOStlqgbII5Shtew7yy9ajkA65zVzH3EeHlN3lbBYHQ2FVkklVwtXtgztfxDjLnesPjJcwTTj2SBPWeDRIOaJdfAsCvsC6T2SmkPkmPDL7QlWHRWVfgesCBh7WtRdfLU6sCWExLlJS45jCtGTnTSik1fEI9WmSR987CsTEoX3xmBOX60xLIjcKCtAAikEDKKAZoFRCPprxRGxmE6G8kUUYEtGo6RX77NrZSRn0a4qaknQC8YTvXNXdBlIS5EETDAE9IvPCY5zL0p91tpHllTWbi7AoGIoAkUOBacpXARLgcZUjxm12EI05qFzevJ4NaBd7k9PbdZAxvMOdyd2bwmrZHt9chWVhTHjxlIuMZxCWRsdCt3LAoI0CTCiAoWSHi51Mh97SE1cnfJBYWviVS2j556lVuFZYe6ZjKfvPLS5mDLBu4wVHQOfA",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/Sb79728426823489e8bbe372a7b722fd3l.png",
       "queda": 10.9,
-      "vendas": 9467
+      "vendas": 9467,
+      "desde": "12/09",
+      "pontos": 3
     },
     {
       "nome": "Caixa de som Bluetooth S18 à prova d'água",
@@ -500,7 +529,9 @@
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4oqFiedBEbLtm47xj7i3HUm8q2q2tmvzR1HwulXkPXb3VdxX07txaOmmy4zNF4o0Rv3U2sfIhLmZ1jLQqof4pNd0ENrZM0QkPRTnO8aYxFsqCKOc1cOgQIk8MMurCs1ylYj9wREw5rKwj8RCwPu3IpP02Y04MPU4jm3PBqhk0vCvCTUOiHhISl5CzTJsHZA5pOYwQHDlH7p2tY1A3SG4V28Jzqi0HxC0CN4ITxV9EAsxMHBUKNiuCVOkXN74bPj1JCNFxYJP8jJEw60szlSy8F8jsMhEqmnLT7fgPZZJx7zyFwUjavD9H7IttfCE879Z9oGsb0qgsYvEuxV05dXOoCQfZeaKGKP8SlKmIyZ4GCqzywhI0EYb6VNjUmLcIbMiaC40r8xrAhwuxdqQgiMYtMuhCH6CJNfN1ODJ5FA9hMpAEQOZAzK0QPGI02S2xeEEY5U9LGbpjspw6u1c0Irhx0Y0eUU7sL95gOc0w7fP4SgxC96YA0IXOKyPyx6O2TBBo8WtBzZxaQ4iXJg7DqBPOBHmzRM38VSWk3B8cxFLuGcP6bVU7ifr5C8Q442ANQ4reVVEjO13ATKIeCgGWoA54NDrBuYXr13iFmqRQXwmFuUIwiEHxBbSYcnxObHPWL7AlewdzVhDRb5rZYdbMCR7TG7kGhSQTkEHjoM76c2teTm12FjBwmWuI2LDlm2PsisxyO1KvU2ENzgeks",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/S477b6ef20b4b46328a923863c5b269269.png",
       "queda": 10.5,
-      "vendas": 2865
+      "vendas": 2865,
+      "desde": "13/09",
+      "pontos": 2
     },
     {
       "nome": "Caixa de som Bluetooth ZEALOT S32PRO com LED",
@@ -510,7 +541,9 @@
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4Ew5zqxQugtQlxl9WITAEULChc4gNyfVNyOfr5OEvL8zIq8ugv9Yaz8nLSGidTAEbFdxOYtSeG5oXLo1MwycTf8G0mPPJfNctsAPIGQJyMKWC4dVUmy3lSnx1fmh1vd2kcPjsczh4OXOGKASsGCVaj4nkqkFfPiYBbVfTA2Dl2NESjW12xzCIIeWQRqVpKrDeqobl79O8YgXoRYRGhgDtb3uGgigtUXJFLaycEhdILNElk0SwXXvd77TupJOAB9mhc9XwRJoi0NrV5YOYhKnHTwniL8ay82K4p7GpiedeJu9yw7RpFZDy2kcO6ZvAtUyZ4l54Gjfac8z6k2ye0htTc2R57jk3onNbytaUK6cdAwGZkOJHYZldurjOV3fWcVNro8sPp9Zr1ZFY0XEOSfDAJSHG6oMOQi9nAbUaeaaitogplnRe6iJWI5xMNK5J5bxL94mcR6kCclOPe6diyHCJ48BDmzfc6gYqE2UtgAR67wvlVInm4Xp0nupzJkg8YYgGc3YxdUeMfTkFQCQuPPiVS63gTCZU3MOEStDdNXmc9AhcFhohoWNqLAPXfv1rFqpej0nULbKSwgwdHt0UB7r7xpD9FcLUhulU2rCHuFUsOsMhydRdrrrMzNobinPdrnTVnxdSq0hfimohslviEgCRxSf9XqxejQdQ772YUgXKrOecDJj7kbS6QXJIursBmrHfC4BHKy9kIMZID",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/S92b35c79db374bd8af678f246bea797en.jpg",
       "queda": 10.4,
-      "vendas": 4537
+      "vendas": 4537,
+      "desde": "13/09",
+      "pontos": 2
     }
   ],
   "achadinhos.instantaneos": [
@@ -522,7 +555,9 @@
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4mnbuOxi2rYlZ8HyxUgyVHO06wWob4l4Ps11FufQeh6oDvSrN1XWVpxorom1rSB61EqAEFHL2UvB1Q1V0VILqVa7h6ZmD6V9PD9eR4LNHoAPr3gyboMGCEudNPbsWicKcUmPBi81ppWSZ2uHcBUk8dT9LNAeeFVZzOMQr6xniESqXFqM3x71vvF05p32ZjMq1Ofdy7UcHMOfv9jXilNpSWc6zAzwXl7T9xOH0ddlUC9vaTroSgDghE8K0PCr9lL8GkO6sTLZU1ilfRFO2mJxtuPMgY2VYUhvBZxCiSZG5AKaQx64UsZiKse0xfSqRuy0VesNhrHTEschzuXIvXVBmWYC7QNrpy7OzGmnCxtn4h6vTvQlQXE9l4xbjZC6NeXV8Xh7AjbF0Ocmy2cJ1tpcWQmb6zysLa5ahaT3Xx8Pyqq3jdjxyqAih5WEZOZeWnluf8HzgIVBC7GtK4miwILfX9DklV5LBxfrkKXzXr9G24yAPsGU46CXvKBN0hvicjLKpkEiLMPxMCzTfXiWg1tJEFwK3bGWlCowr1J3Y0vXqHJhyQvnovj7pSLNwfc233zSw6wGmOrN2UMsoDMtKx6kVGRa2MWsPfK3lDqXtbKGwQGbBmZDLVfG8xAXoOz9GPuGLvo8wsMqBNzI2zvmgRlWAnUMqemWdGwam85bqpxW8VdLVxJOF8DRBCFGsc1c3c1MSvatPdlVwapCZS",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/Sb8c76ff4ef00417587b77558a559a044d.jpg",
       "queda": 14.7,
-      "vendas": 5862
+      "vendas": 5862,
+      "desde": "13/09",
+      "pontos": 2
     },
     {
       "nome": "Suporte magnético 360 para celular de carro",
@@ -532,7 +567,9 @@
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4k80cAqjB6U1jGhZyj5fpNH37bM2CEfS2fNrf4o75vY4HqaAbvkjuEh7EKz9zQIxC7pQtcH2OUPZIW4j8ExLgL0ToiGVCFHp6JNoJ6iwkSzWHoc5mB0UeVd3FKc73Ic9T17pwbdKxXQIK13ZbfSy4OONVmc9fsuBv9B14CXQLsAVPcDW9CwXQGklgoVKwChIs8anKg0UiUvxzklmmcRSRUX6rL0ctD3yzirRPUwlWhLahpMqaFF9k6N3rSFxDQHCTm6oj3R94JTWGWNMMFvZv9qXfTKmn64pRDFLZBIvFtXEigxLdHAQffYx9YIquR377p0l9aVmztFbSJZH2AMXEoFG2Zmh0jsek3dhd9z5N03jyNPFCCFzAxM0kWxvUIfnwlK1T2LDEAzGRijMzglg8flur8DTRCMQm7006c2vGFsjL0J5LPuMbXpRXVqeo6qMe9hy6Qs1ytGitunQ1nIvP5DYzzSbaJGeeXTwYeDmuLT1hAG8dYm7TQztUaCj26I4QoxYFuQrdWjoFPwzxOK4DKyr2WvrDjuXTZQ7HKqtcm18Hi8WRhefhgUlKP9mOZhIlJuPXpt5ifl9oWSVYVPU83vWFgmt9f2PG9noaCwjptQwOmMTplrwtcF5q3E7rkpcd2UWeauojnBJsYFySLEn1XQfq5EOjBST21rsbnJsjcN3Jaikal6I60kuQFkeHC29B1KKD9krDR3dQo",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/Sb4a204d19e5d46b6956c10a0dc34e9b5h.png",
       "queda": 10.4,
-      "vendas": 17437
+      "vendas": 17437,
+      "desde": "13/09",
+      "pontos": 2
     },
     {
       "nome": "Ganchos adesivos de parede para cozinha",
@@ -542,7 +579,9 @@
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4nzeZTSUIUf5vqd6mqvYpUogBTzf963ekv2CXq1YrC4mgftiylE9yKfJveRbMqXYMr3UOS5dN9esOMDdF4Jl2w1KapwaCdNSTzdMNCiw3Z4ImY3vlnOwqdxn32Exs0YyNEW9qegpMRH7mRiHBJSZNO9RJDNED2spMZSTd1NlthpUdIWkVTPzNGEr1S9pwl1v56tUCvj9dzd26fIVziMQ38a6GwZxkdMC3lXBGZHSiN375qTWXhIO95IUN82qBzR1itTpYhGRafbjLTbHkE6h1n5Jm83Y0W9bTd0U5C2bNbu8ru3U9KxWyianBgMgkCwVKjGzM21inKGTayZJJA7pFtFMhe1cjd9dBPe8L86j7At5Xe61qQNw2kd9IEz2rUU5hbvi5RHNqLBssYKi7HsZz0RvBOLnVfLPN956rOJ9ZRt3Z8NEyLpoEmupoBDJvxaYTpN8iLuhgkgCT5VRsN7kFgyN2GBslZ6Hm4D0DwbfBGAEnkX2QfcX2hLm3H76J2Lt4oYxsjdJZS3oAmEncsD3hIOkUOnQIPsBv4sTpx0bdwlK4J9GwXTz5cTVp95bemyb07ROTLD7kRKMdgQma9wbP9PtqHdkyxp8YlqiYakZ8C1tiEJZO1v0kcIKsYKq9n2VUpBfSt6KKbpE3IuyA2tUe0IZImFSWsMvOHajmxvY2xzyv01MksiguYMoMn8xCeRiKlhGEYh1sAYxgG",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/Scd3d39de7e0c441f99a53fa63e402033J.png",
       "queda": 7.7,
-      "vendas": 7036
+      "vendas": 7036,
+      "desde": "12/09",
+      "pontos": 3
     },
     {
       "nome": "Luminária de teto LED redonda e ultrafina",
@@ -552,29 +591,35 @@
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4ny9gW6xt5qCR56K2sUYp4uJK4aaclidn2G0ySJxrhczV9pad6mCY4E90SEIdP24K3uledpREs4aDGhe3h1tDGYmOyfURoizuylNvKtt9PbQS2na93NkppmEiEW3ozMyQXvuXgARRPp78B4HzFb8hBs19Zv77dv8ZBmsJY3dcFIbfdEoPpTvy6Z7uuN2e9ArUv8sXXY32AJz2BFA83cohgqibb42Dd9qdC75z4u1LgGcrvd0y3vZ6HbjLcuCYzl19XMDdznNpOmZ6FSWEz34qZvKGqq3Ob3syo2Zy7vYeLHiZ7hdq8eVqpAuW2y7unZ8KRV09MDvZnKdffooTmmPUvGQHf7hTSo5kBVW9tgMRt7CQvmnDIrZXz2Ap9dbiloq2OqJcXNKXKpVzgmXBZyQhCasd13GpKPhDoHrKViPSr3YG3x3pAOkmfwCtXH6UfGpTjWs9BzY2lahskfKKg0TgEXbTfnXZ2yPQi7KC0RWFQ8wKxclc2Rv4ZJZ6wAUzQm73Oem6mUq2BHJawelbj7yd4Ir9HKuvtviLJOecCT2KNw5Sq16GDIG3kdKC7doBawzUq0TGOLfV9O50RC87iK6xl7uY9gJihmxuT8MF5isy4YMSMeZFskIrEL36GJVznk4F0LkLiaPz2AjDUkFVNbaSWgGKLdI0sBkCfjzerJ4LW0FGCuCm8nDcMw6twXEFIjm8WdJ1C5Z0Nepms",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/S1008914558d34e7a9105b02c5a5d5074b.jpg",
       "queda": 6.3,
-      "vendas": 2970
+      "vendas": 2970,
+      "desde": "13/09",
+      "pontos": 2
     }
   ],
   "atefalhar": [
     {
-      "nome": "Luvas de Levantamento de Peso com Suporte…",
+      "nome": "Luvas de Levantamento de Peso com Suporte para Punho",
       "nome_loja": "Luvas de Levantamento de Peso com Suporte para Punho, Respiráveis, Antiderrapantes, para A",
       "preco": "R$ 30,99",
       "visto": "14/09",
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4mTkKPkI2bGvplxft0Dz7zPKCQXbP50VVV7FoYAFxtqFi8yLA7QmJtsgifWKHUbbAswaLd1D9xJkAfaLNsotjr1tn8skEe87edE4u88Uc6Ul0nAJPNoy1cWkMCA1Q8BHqOaor6BSeI1PA67iiqaCVngbH1lqTQfZIV4T3P6tKWxuRq6PSDb5U6iY8bMfS2h0PaAkRiV12s2FBn8WQb2rsG6uhnvtU8mNLC18Ri20Zc2LHCKGjiaK9gX4uqNwDg0XtzwmNyF0E1oe0TXq1LvqCQBMsXzXJDJ4RsnaMGTTSiIBqkQU4M5dltKhHIjaYt9aI6qtbR488N18rj3yVUeHSemWt0NODtdeNKe5dz9oeVTHwtAtWWy3mpQE45tmeXpHmEzF9YBGYLwBMbw2zc3bEIY2QJD60QYPyn0SadDxCI0XRzZSvSmt7IDcJmi9QGuE1RjigJ5XPWygvZp6fGBVVA0FNyqkEfYNVQB0xaeY5WsiGIgd2gkyWuosqP2EQcKngGeqhoX4JyZlRCkcWxasivBq0suG0KUv8rgxj4Yg4V2hqG2DROg5BqfO0sGtg8LCYGxpZSSSZe2ThXJBW6DBMfJ4IwUaUlwcsJMrC0H2TsXlMyz79VTduR1yPNnIWq7t63tllbegwldazyiVxMXMyhP0Nkn8RZpQhqSEzgOedwvtqeCTycWc6LqWFAPn0RDhvqcRdvBOzQDNL6",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/S34106b2144b647798b2235ad8df81f88a.jpg",
       "queda": 8.3,
-      "vendas": 1148
+      "vendas": 1148,
+      "desde": "13/09",
+      "pontos": 2
     },
     {
-      "nome": "Faixas Elásticas de Resistência para Glúteos…",
+      "nome": "Faixas Elásticas de Resistência para Glúteos e Coxas",
       "nome_loja": "Faixas Elásticas de Resistência para Glúteos e Coxas, Círculos de Treino para Agachamento,",
       "preco": "R$ 27,79",
       "visto": "14/09",
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4kWV6jsKqZA1rXeeP4pZcpxNrckZPfhSES8m6523uGQC660r8AG1p8QnEl8ECkVGqJyHON8Gj581ALpOhQf19lFh2Do41t1QWgZUk2Vz2zQ1zpKg7Jv3kohaQeUEFdCS1VMBbLpJfjew4P50LizD4FNnUQuwYiL2zS12F3DdXmcM6cldltDRErEbuVxGPdhm36mQ8Pc0RCW4kxnSxedxuLj5kFw1FQdN497RLeBd8d4s6BDb3LRXIX9P0EuzMOwkScbbbI0DxaPqwbXho27LjyXKmmTfvlzko5Yxf3kuHRfDCnoAV7MO9Np1BKupGbhOkCrktx0SY6nyJtyUjhTzfvWUdyjNNkTKuRtVfHdyu4SiGUHD06oGz9SUzFZZMoqB0zLJmefXa3DCW19Ycru0prnholPqXqRIdHFL7RIdzU1fPnu4uySLCdYjNpzccuopYPUeFlTq98MQy0shhZAVDYJFsqO0CizSLfohl8llqy7omrILxJ3g2VWhktrkBlQvKS2Gj7Lc6Nl0Qis6PPD8uoIwpx8ddeT9nV8H0rgUgl1YHl286zBjt0rbpc7RtOw4MkGvAZn0OFmCRstTdjzMjo5IcOp3B0TtwLjEGzbgqDb9rdIrKUyWkJW4L4Gxdi7MU0ItPuf6kIhpwpsbeIgZYcGw1ugU8dTnuzEa8RSQdxY6wQJIZVUrdgIhhQyh9RZwJsqq3ijM5OIPuc",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/Sba7b6a2f44074a47979130269d35feb9Q.jpg",
       "queda": 6.4,
-      "vendas": 1737
+      "vendas": 1737,
+      "desde": "13/09",
+      "pontos": 2
     },
     {
       "nome": "Luva de boxe infantil em PU para treino",
@@ -584,7 +629,9 @@
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4EQVNcRzqGKhqRpjZnc6xLIRdXF0sdFoOtE7bixGApBED1pVSgWbdMUII3IOe08UBzYhgmmUDweSgwFzH0AMp7fzNPW8eNPhFaM1pz1T9RKTRSArVXuFfr3sG6hwaEgJXMOwNVbmg7Kr2bLfQup29EdNjTiwCKxWayKmYPpInglTijLvsTfHavFCgxp6OgDWMapUWD4YcBHUbkQTQsNZkFF5H3OXWcgJfiYR1fm3weaUm5gACpfjBzuk15g7vlEaklAg72ifSjaVVLqC9w3b199FUmj0zVEpteQ7TVyTyGNPuDfiwCnBc00jDX8qVl4tk2FRVUGPnWQmOfBTRyUIkMM8TOWxIdZXvr3yeAmXRbPzPu6tYtxQXVnQ1DhEdnKowPpT0DfMc4j5wVMo92XCH6nBJzZ7avJDmxrMwYsmI43Ihax80xUGWR75w8rvAt50PPP674xH8SobqM22ZySw7SMu8JblHH5KfS5xpGM8TYxzMhdlLQAcXCfR3QENbm2DvBiNaurkxHALiShFFu7AO3g4NM2bEU5Mc9Br9uHmyInOIhuR7M8uWLKwJBXeHhFJyOjtcXq0kkd55x3TVjZZMYbwCTvGp2guY9TZWDysCeZ1O2Sj9CsyvXVUihITakJiYIrDsNeSx914JmdPJDrkQrZEZK6MvypaMIvOKdpxckyadc7aa4W0FSQ2dcahpIA75tHfux05RIImsC",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/S96f3cc9008724c0f88734bb4eed6b5f1m.jpg",
       "queda": 6.2,
-      "vendas": 901
+      "vendas": 901,
+      "desde": "13/09",
+      "pontos": 2
     },
     {
       "nome": "Luva de ciclismo fechada com touch screen",
@@ -594,7 +641,9 @@
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4nxai7iuiGnIBmVHRcn7Hy067si73SaI67LQAOqAjVSBSrjYmFEotnQLOW6NIS3pkxExceeGkBVqWOjhaZx6VLBnWkEt8ppuKL50SkSCaGvMWkGBAOSJLffaZ6nVsyHUC2PJizu3YWxcwz0ZIflKrPAGiGve7xDLPJumyasjGmtDbbaF3uJwg8XYEWgkAR7Jr7UiAq7WmigHhWisYCfiQg2TYn9f3RT4KvgEWyQ5BEFYEy343thqzR9oRXPPAuHU0RGtQNCdLUJ3ytmMnMO4E5PLDQwAJRVD8IQneCeKsSyfonu5AVJP6PRqZWPzTelcq7QMWKNXizLltsoGVg68WXClY4cckj1epkj8jLMpc3scI6eqhK1cN7xy6Yx64TcmVCHuzIw6gZw8ICMLKMsSSIZmvTNQMTMeiMWLfvC9QfEd25Y4b6a3i7P6flLsfbCPvYiww0fw6eY58MocTqRgG0z6GZOyEXwxlkqKp1b6n6KwaLl8h4yqk4xfiEXVsW3ocEFA39zkkdaZiRIo6Md6vYZvIw7fpjF5Q7qmUFyT3BiVIgUIjn9Y5etuUxZxRZIAFSh0Fz4XBmyCQgMwny3X1rDYDXBb5rL9B4eobGegF2QMXJZBN6KbkImCnHuCBfTyjnYKL0r80vj2WxKUZDZKLC4wQNZrgb6jH6YHG1TCb64th5VUoy1FnYQip088OHS1E1nFQwuUCPHw0g",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/S6de8268142ca4649a40bc18e48415844l.png",
       "queda": 6.2,
-      "vendas": 1711
+      "vendas": 1711,
+      "desde": "13/09",
+      "pontos": 2
     }
   ],
   "_todos": [
@@ -606,7 +655,9 @@
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4mMwDVCN0Aep3TRj7X03WkANChY5TtwP700CcQT5xva1KXXck3xjoI4kDIeu1MaXWg81PM6uIKzusDNcREevdiyfuLdRhhqn36m1iM6H0qXEEgAwWoSBxRef37zvBv4nsDTlTO1RFCbdKe82YDYJV6NKM6iRZdrgefoAwdIlsemEFmtmOCR1t77b3usJodJOjLkqW5SewYP2A6OHvORU7uo1Z3mUQJu3ifN26Re5GWFUvLycto6AL0DoC2fVEBz1sMWjUoerwFtdxa5nCOpWzFUXmeuyNdij10RlEbLgAXXCIS7Q3cP2vBVpB9lE095wIaHZFtcm61Lgw8UYzujXbX7ovA7904nTp8Aq7G3zqH9d3NzAnbL5MQReVbjhZG2RRJWWJZ9uEbEwqUH8yr3MmgZ4GvzARxA3DNvmpqHLlaU551qTYhPhIaJFujJxQkkKbly1K2bXVhl5ursgRYe7s5ovdXybEgkh1VDamrhHyir2s28CCoT5yknHM2dB1m9HXorDCQ8wPxN44IXubooF0uKI3E5xE1naS3RZxWfPmIALF0iIUrsRsLku3v9g9LOHWu4HX51W1N8DlARcOOzCx6FXS1qpw7FjyFMU9YksIlsTRVj2Nxz7fZGwsT9a8JnFQulpFEWwD5Lc4Mlx6ysGu0sCfHApP0OiVQYucJjSWAoqfmVvZcFUf3jYl9aN2zki24bUUfaVMUTgqU",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/Sb216e96b4ca143f8be608fa36e57455aa.jpg",
       "queda": 18.1,
-      "vendas": 11057
+      "vendas": 11057,
+      "desde": "13/09",
+      "pontos": 2
     },
     {
       "nome": "Kit de maquiagem com potes e esponjas de pó",
@@ -616,7 +667,9 @@
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4kGvtT65awcaYaysmiHSzp5d2L6upJyvGY0KLSOp0amBHGZ7Ns1ghIZgZ7uQfUEtxmFln4i6omTFmOUZmpuHgzHAgFObAWPDz2Yv6o1oehZSziPM91kfYIDNP5InACZi2cQsmQn8fscQMO33YshA2GAgjEr2tJgE9LBjiunBmQvdRunET47jQ2g7KAnlCK2Dyv5W5Fx5uaEXL26UbLGM7i1AMmvgWeP62nWEDel36Cmf6Zkebh6uyVMQyt7z4oAPvtJn86z33Mibb8DkjuZ0aohezASVs6eJiMFv0Gvtq9hnZtiRZMK6oF7dCeUCswxzYeufkjiAeuxHj7urNgSn7uTzNhoqR0HxSHhe1uniocU1kbZFUBO85HOCvX221T5F5NJSuyyNQIjwsq98E9AlFEoiGRaJkytlFNIiEHeHHZBSHbkyEDHVqxgS3psaqfNZHkNobwWZeczMh4LYBR0p6v02iXb84UtLlq5HgHIB4W5jLUmClJmvQcZtrfZAbj88lpboN07Hk8x20a0mXsvxAAFQfvMjhTd60jlWeu6QyvnCIULBpUaCY0Jt2GPH2CaXD8ABYzb9P1htzlpsithUFDRlR0b7nVYoyRQsdwIdvz0tpOWyIsdCijWpCRfCJucF0Qwi9ieZvL1CaAaIvB6mDO1Bok8pLfum8jcnoVKmT1KxPybpC8LcJTDJM0nMZZ9ZAgdNF3Gqv4188g",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/Sda67768c38b7440ebb8365d9c1969a22E.jpg",
       "queda": 15.4,
-      "vendas": 6141
+      "vendas": 6141,
+      "desde": "13/09",
+      "pontos": 2
     },
     {
       "nome": "Kit de batons líquidos de longa duração",
@@ -626,7 +679,9 @@
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4khRmB2X13dfIli3mSvZZMTIue7YuXSszZFPVvEfyG1TAdYc98DvhMHsRYNJ8udsYWhjAKYeUb88OgPnfM96E51OhLX0DQu7XVh8sCTshXBZXBWBvr1mSoEArarGaqDKpfhkC9ecHr3J0ZsmBY9V71R5l3lPn0Hb6N5OCzak2sLiHM5AxweUdcTX10gdegD1IkHvcwN13Q9f27cGI7TYpLEstOKXuJ7vDJUwiwiEl9UQROxSwm8ogd0l1K7QYvDJxoVUVD3065GGakpmTmlS2SbJOwJYQy9d4HzLUTe3Lm9kVcxirZTAaWA3JD9urJeG0wkf3EiJnQrf4zrHDLXkFeKtCHlj5M8Ml185Vwxp5oaV86cvbYAxiD6Gy8aDeFOIZCdrVVgublg6wYQkhdD5kAsPfNyzh9FfMv9uGhJvMYB4FfSgZ95I7veeUHnJ6HKTU2ZmVbFLiWK3cNfJaRaN8zS4pRklbsqM85k8N978qBO3lmItwWJCqgsUxBQw6tiQSw38YmuHjv6BtU9l48HXGS1C8p3mhBDln84FLSXWkk9uvArOVYlSpPM8Tl22f3p3ioFRqKjaooAWXHF2Snlb8jCgAkFoco4pELgXLwdQcXfsqunTXKq5IeVFtBVGnqgW4CeksYhLAwBsMJxtdBPcGboF37qvYt85UcvqY9YjSgzPmfuiCg8UwWNsOyNxvfiZ44IfeGS11H3HXa",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/S725007040365409cae98f659c4443eacJ.jpg",
       "queda": 10.2,
-      "vendas": 4818
+      "vendas": 4818,
+      "desde": "13/09",
+      "pontos": 2
     },
     {
       "nome": "Estojo de maquiagem de pelúcia de urso",
@@ -636,7 +691,9 @@
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4otk9m50y7Jjw8VGNPeJcBYsyLpQQJmkccRjLEukITYZ2PZUeS7nPuny3zFNBIctFYFjew0HBJA1Jtg6FwG6kuowby9C5rlAgLDFcHfaRpVNIzicNUhKRPblBdEOdXNepSPEu8T86zqUhwjpUmMqCorzcJ5tqG0FskDyxv5BJKFs1wSY7AEefXhQt5gWWjsL2ZsK1IsHj91MEyXlD25xTQOGW68FBCTORxc6VhyHF3OROJYYDIbalJz6OcTiynH8VSHqFQWlRj503PVAR5jhIXGpcTovPP367PH7r2TNQvDsMHbqLRAC5b5olHe8TbYQActRwuR9bSzv8bBVw8dHn1fkKIGWIWiME3PKXVgK9yMY0WoqhuzUFRRqsLy3wAlFQWmtdWvJoSOC1pDlqB3PdAsdOxS2OisArTZSJCSw3whgxA2rgEvap4mmXul4ogaI2s8zimZpM84F7RqZCwe5mhFEUN60KB8YHmo8uWVU6UUmN68hNUQZ37diWrEQfLmXUSgAyqgk1T5d6mP10pOD5RsdXKyncQ9FwOhaYEP3Dmu2BA4Ws2g536SLvGSAdxgZKZZJikXAZL59md1D2YbvbvKjW2XGOCkg8JFLwCPz2P4LTCAx7NeE7NvKWTUDnWigyyOmnPWf6QtudLA8WxS9kOiy9UnF6OfEhWnkbCHGtpvdBRisIUkd56GqLJcgP6Uo1bLMdT6yuMX8ss",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/S60abf67020ea485ea8763eb17d1fe48cG.png",
       "queda": 8.1,
-      "vendas": 19445
+      "vendas": 19445,
+      "desde": "12/09",
+      "pontos": 3
     },
     {
       "nome": "Cílios postiços Gege Bear Sunflower",
@@ -646,7 +703,9 @@
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4mmmks8Lg6AlVw7lKR6YVLPIFq3fDNqB1po7APITxjAKpVvKQlnEGwuSNeF4WPbe96jFurGTESeqn2dNKjs5Ho3Q7BtAVXxzI4GmI9Ct3v0BxGNXYBaNpNv8aQOgkW5Xr7rxFjyL9rLT6HouD1fqDAuf8HF6q4pXqLx0v1YvzzUoiA5XFkOTDvP5w78YRzX0vClLmbufqiHuSCe8X91DPAPurYyceEGlP9Ft5flM7IJXDEJQxx3RcoOjxO06yeHTbK5aAK6AAk5uJtycPogaCPjUfI36iEjhCxRaaVnrheYP8sCW33G6HrT2pMdefQHXh1L0jg9byBTjbG8Nht2BeI2zAsoQIRz5pH9GpMDnS1yCuOEE8CL0wc8BdLGx1otV2BGUh0byyZKoPaYZe8YeKhrKNasiLKUx5LEQ9qiRMdMJixeil4HHKoQKtNBtOIAkRe8GOuevRzsSNM6PoEX12wSahUvIFeAirON4lsmsDXqQlcrWjYRxmWDnpC8HcBVv29EAM7OJBcKv94r9qOhjb97dSot9psLJtL87JW6gLshjWq91inp7zjUvG7bUAJBmImQ8EKkpnTZrhdlyguf03UL06ufqIFJUKS108rUaxDffWuxH8uKx7IVe290s34xoPBHmNSWNi3zFsH03zLyf19yf1nYCbZXfOHJb9KwI1L7KzLfo4Uoev7m5U3aIAjjvFsJ5vdJSs1RMeU",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/S7dc9741b46a04ff491f1d048f42f9db5A.jpg",
       "queda": 7.9,
-      "vendas": 14960
+      "vendas": 14960,
+      "desde": "13/09",
+      "pontos": 2
     },
     {
       "nome": "Lanterna LED de silicone recarregável USB",
@@ -656,7 +715,9 @@
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4mqpDqNZZUGpAmNoQDodSLoo9pN6jIrDtk7Xn35ZCvXKppDn8lDwVCy0sP25ULvT5vFp1fpR1vqROMmnPzTBmMAOshkLfpj76JoEv12pGqB2NufnLxPsXDQtyEP7dO5xmOVgKmTXeTYPcgjMmIDuYKi16znIEc3UHCdNZsNRfqNfDF6KZAC8gvgIbi1EinkaI1OehVLnBI0XXSucCLjUEFkCTScJANipGpBQ1zSIdepbl3JoX0s9oxB19v8QfQ3i6aE8vWZ3StHMjZpIf8RfDdT933CLZAMOaYxlJnRSK814EZxGl2iqMbIsBfGeHFYgOd2E9tqSp3fE2ncTv8edEEFeAWTb4Gz719TdvtSEf5NI72QkrURtwB0zaBbLIq2dwahLY5GWSdeROuO6G6i2IvKlX3nSH1HAkS3HQA4VoMgggMFW5rC61BhPHTOG12TrjwKKxfzsSlUQreqkts71ZSp8XBYo0mO8aJnYugrz71sYjWV7nTUX2YMhHMGvS63lfYGy00JgBbh0KJBCXhRUBxifPddN35zbWm42mv9qjdCTZfn0od7ioRHj2V6hZkIl2H5IDtJ6zVfWaLbLfOVPwyTGPeVElccnZ1cqmhNDgfLtPzGeGReMOgylhKofZgneuU4R7bQzh1FEqyemuPID297VRK9rN0tem73bdsC3hsg9ekD6dDH8m6Kw5AM4RxyVz3tuOczFNZxcYC",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/Sb4db71d49a824de99d8587697f1b63f03.jpg",
       "queda": 12.2,
-      "vendas": 4202
+      "vendas": 4202,
+      "desde": "12/09",
+      "pontos": 3
     },
     {
       "nome": "Descascador de legumes 3 em 1 de inox",
@@ -666,7 +727,9 @@
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4mMT54XssoMBzE4wgK0FfnPZfqXosjHuWAep8mZIrPmI0rP2unOd9v7eyQbRV0uRT72hqAyN8oRSltKH3CLjJezpdMQ4166kwL4TMTQSP5FJVbaon7TTSWlSJO5ofgcMgCG8hSBcCtiFWuJ3YFGZbZ2mfBcbVlMPxmGXHLzPmhuytwLMptukxTdWYdgUMdIHgulTZhAcylstZdLS520yv5TSAuVhRAYZtxE5lY63SJH4AZcYpfJd3q83wwroSz1fSRPU9G6NknYg8UOoXAuw3urPWdv81Fx2QfQDl9LCBmWhEMNfOhO0uYegX3FROqTHCR911KWRvym7b39nAV3GKO7MU7H4x0tkaYbUXeAwoffeW4MXouokggGFZ9UpTqTUk0XEhH01iY4TAT2HJvwNPQaeVQWu5j1qXJ2TRNcysJJf6Y6QSbKRKzmjdsasUDYd2d50fkBPUvuGl0gjJEfUuWmKBvxqbH7vL5HgS6kQULoifs7AGoFRV6iRwIjRGXBkc4jMT6Y4bE7pkgLf5bsOArNSXjlZXa177NmHBcwzeu7poFKu9DaYwWVqXt7FvEh1wLkX6Gnu5uXKFX29q60FXb9PzTWmaD4GDIp3GceHUpNAitA0PBTFdF4rmohP1NV9i78O0aaiO3axxtJPTNN4EEh6Dck7WXPeIc0ed3Rv6VcAoQO8If85c6xapKvLahie6sBFOeHX8ndDJS",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/Sd45b9f6b636c45fe87724af18eacadcfC.jpg",
       "queda": 10.8,
-      "vendas": 8261
+      "vendas": 8261,
+      "desde": "13/09",
+      "pontos": 2
     },
     {
       "nome": "Suporte para queijo fatiado de geladeira",
@@ -676,7 +739,9 @@
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4Fk8nOsCaGMWUVvrm7gHcnyjJoAoYJqgboOTk9bhhjq1vPTpFygMKSsWX6Whydw0MAuqCtxuXXZoaTH62Us4eWiDYC5rSds9SKUKcbWdZGQaiU0g5f0fMDieScwfLpCjiugcFpVNphURDvrFnSfDQRsiKEeK0OqyNqiswGXkbJ6G8h9dJwnltm0WXNqTP9GMqHlkX4BjbR8ZQiWepX0WEcQi4sGuSMLqA868bPfTQEk7qy6d5rGsSTBr6mVpkD37WMscy87xZ6lRJCJvJzbmD8gfW1xowyuT8vNOHetRH8IVwvAuBaFLewyRnhztC3rxcVgiOTvsMWNw8pDXpy0YOYGNpHhT0F5dhjTd3n2O93PSWxWrx81fIneK7apCDrxgKD2B0ZsyFiy8Pwfx0fULjFNcnc2mhPHfsWfAdFFmn0iFAqgfBWxpU4lFGzQgXdEWzDqGx0hdP663Kjg0A7EBNe3pibyDfD75xlxD9DHxmUGSCEJuAAxHJlAgKnGuT42gTcgHHk6FWR7OZTJBZI3AXH3VWrLcLRK8qzpodYF5CpbvMWfiad8pIwkrdar1KmiyI1f7s7UvMvSBuwNYGIZ441sCF6JM5o2R2jYebdKIC8Cn6hhbj0fRPowo5xFuEXFZ5AEmKljE3gEpQGNWFeUnyGqIz11sOwAbR6vene2jBjtoNdwXinV2Dgj4LozOyUeTfcLLfsLgEwY8BO",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/Sd174449252e846498e6a112a9f3506a6s.jpg",
       "queda": 8.8,
-      "vendas": 1453
+      "vendas": 1453,
+      "desde": "13/09",
+      "pontos": 2
     },
     {
       "nome": "Suporte magnético para porta de lavadora",
@@ -686,7 +751,9 @@
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4m4zWgSQhBiv1oXvhWIjon5CN6hmtXUTfzXUdwnxyuHCO1uazE884Dr2UpX6gYPP6GW7869c6kQkxYipXPgBffoaFAejd7QJPOkQ1pwDOIG1IcbxHiEkdpXlt5RlYnk0T1K17oEqQqHgs8ipzDFw61qFjfuLV5vgpHgOiuVDfqP9UdjHYbG1MFxS3L8jCnxqyTAizKZRpk9u8GAzPheg1uzkvhdud2bjWwRSNlbBJYc6DhN8yTppgA6mp6r7mGqqQ9T87etrM1AYWwHFC5onF0btt3DxIYSxK73TAl1twOZNRc6boAaqGt3pbgulkdQYyE4mEyPekrLckKKtgNbQ3okLj6QxwNXyM0R4M8OFNKzExVnqwxVe1NM0fo9e2w9Cqr1asDshIrmczXwrsP6NqQJQljvGnWyjbi4MsEUNHoLp9diuyMtq1Ng5FjNXHHmj0XfVCiU1fsnx7yRNdRMffy99mxwtMcTWih5Yyx9EZLBCEF08Ts68G7dNJtuo1IdQPZNoy3gavBBrnOkaP7Bxt4Xst9ZI8TLHD2PIpRL5S6Js2DNFarJc4AXrJyPmpfiEWuhQagytm7TA000qwslFmJdOdkGqI61LvLPAeUQI7IWq5Z2Wd4Ab1ZUqyaTMtq6DPrjzc5fZLa8BQuZNlFmymEyPPaT46wr4oSM2HR6siHSf2jmjDUWyaTt9iMnQbGTPMsp5BkobAb4TvI",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/S0f511ec9b23546f4842d9a28dd47812bZ.jpg",
       "queda": 8.3,
-      "vendas": 4117
+      "vendas": 4117,
+      "desde": "12/09",
+      "pontos": 3
     },
     {
       "nome": "Pote de vidro hermético com tampa de bambu",
@@ -696,7 +763,9 @@
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4E7ZIgyE6FyFpFzqCcKdEtLAASRJo3WDDfi9j6MgQWPHICBQKyShW0lpkmAH4CGdcP8nRUzNqmCUvd1Ew8K54cwcgGqDCYOzViXd9gcvl8y8Eb4XsaN6LKhhCEhBSkIechGuGfDItY2kDscrywjGM5LzGapQNcQEFlomDhXHSvuN4S7mfOdLdFco8Atrc7k69xykb3ALkTs9h75GQ4Mgqs1VqwcYhLyqBu6yy4xXe12Mbm9NYDS9h7CVdpxO5Hnlx7jfVFEjMWDYfIiQI0VkDsGpqQnb6E05QwLj2NhDK04nxqqn4CYKlXVKbIOp9wKvcKiCqd4J0LIOToSTh5ogpGFNX2zvAV0PjHN7khNvcs2xvJetIAelkwYxcA4Q6qi8vmYmiKbvYSSrpTczgLcOqQwlXqA30mM807XIJkNhpLc3b5Z7n0S1fv3QNcSarEWnNaiUPeNNuWLmHIUpU3ESQfJazxoZs0K4mHordd1Kqw7ad26uQTCbqjPQkYROqTEduJfaKHLmNVguD3H15OjMUxJXNBoAlg6pFiZc8X6iaJSXxw81v4SY7cad8Fo9bYDlXVmvAEJuDZHqkaEYGg1M7EScBpR9p6IarIdPYFjqSSfj8tYE3SzQu2n2whRnhVdactwIWsHGTXXkY8gBU5PHq74Tpj3PPMluFZDpCtUMJXbsx5VGi1SBwBpXQFhUmeliM71kh0gGLrRxtm",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/S0aaf3b201f6940e2b5c3b82e71438277q.jpg",
       "queda": 6.4,
-      "vendas": 526
+      "vendas": 526,
+      "desde": "13/09",
+      "pontos": 2
     },
     {
       "nome": "Caixa de som Bluetooth Lenovo C02",
@@ -706,7 +775,9 @@
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4m6LfR5xd5vp69TYrlkKX75I3eZdgMSZPmsMTzuQpog1rB2zoHePGEklYtjvW5FjjwiLTxncUCleJ9ewYs93nHZltPyHXAwanwOAXFtf8YQ24q1sWI2vfQQXJnlVIvP5EcSiJAQ75ZAgacFfzOfig3wqaJCdrRucEuYMX36TLz3K1B05w5zfpHEgYPvzkhrceOqxOHiPI8QM8SiO49XpOvydeCcKkCV2eplEiRwbs1t8u7K9F40JCN87jDDSlPKUzSaAQLyBSBeA4wA4wpZgJIeyfBp3S3Qvo9eXS3f3YU3z1Om8kO3ebcmlFYMk8Qf58UrVE2ipqBSnvSsCMz1548BIIqqXukJZ2IOwQjbIrcawx57HMK9Gn9yrTDRD9PI9jAPbTLeRrcbcEogmgj1tnVBwdbknHne4X3v6wKtZ2wXN7LYS14Ss5Y1xnZpejh2AMNawPyQ1sbPdfWLzIG5UQ3Y7oK3WUyoGSRlPCcZUain2vbNAWrIIdDodEYIoMWF4TgW0hknAv1qyTGZzKUDAfkgxHkNTOkZcVXrhwLrCg4yU6B3sEZolGn3iM9C7gbGrGmTeexoKmb8IkoR5XlZFhbqVtMc05iTQ5K4h8be00zopC2Y6dmrBZg241tORddmprNNsSoQuoEktIG55YB9ceIaB2jr4mozeC1ZKSQcY8tLiU0TCkLpUVumkxYD8LiIKp3rvWD2cTFrtsH",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/S29b85af05bbf4b3ca87db66aeb5757eaz.jpg",
       "queda": 11.7,
-      "vendas": 4521
+      "vendas": 4521,
+      "desde": "13/09",
+      "pontos": 2
     },
     {
       "nome": "Relógio masculino PAAZOMU para estudantes",
@@ -716,7 +787,9 @@
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4EvbZz7j08Mfxs5gTEL9lcFgFp3K4dFolrTAP9AJjqTuwib9LHEkG7DS5HxeP6oSH6nf2yDgnT3HQqssrHYrIagK6LsA4msaz62dQlRYOb6y8DrtcTwRvaJHVfjm2QyncZmflt9roAucaTju1LOJDaJslBSjOUQLW5OJfchyIdFpqS86lW44XNiaAz4APaGONApyyR50ggz5jzjGvdvB7BqQ5ocx3V0UObRYKdwzuNyOJb7HWINrvkf8vXakJySdOdKPJ8sKQpu0PRwAINzZR81KHOStlqgbII5Shtew7yy9ajkA65zVzH3EeHlN3lbBYHQ2FVkklVwtXtgztfxDjLnesPjJcwTTj2SBPWeDRIOaJdfAsCvsC6T2SmkPkmPDL7QlWHRWVfgesCBh7WtRdfLU6sCWExLlJS45jCtGTnTSik1fEI9WmSR987CsTEoX3xmBOX60xLIjcKCtAAikEDKKAZoFRCPprxRGxmE6G8kUUYEtGo6RX77NrZSRn0a4qaknQC8YTvXNXdBlIS5EETDAE9IvPCY5zL0p91tpHllTWbi7AoGIoAkUOBacpXARLgcZUjxm12EI05qFzevJ4NaBd7k9PbdZAxvMOdyd2bwmrZHt9chWVhTHjxlIuMZxCWRsdCt3LAoI0CTCiAoWSHi51Mh97SE1cnfJBYWviVS2j556lVuFZYe6ZjKfvPLS5mDLBu4wVHQOfA",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/Sb79728426823489e8bbe372a7b722fd3l.png",
       "queda": 10.9,
-      "vendas": 9467
+      "vendas": 9467,
+      "desde": "12/09",
+      "pontos": 3
     }
   ],
   "_ordem": [
@@ -1111,6 +1184,9 @@
       });
     }
     var foto = el("div", "foto");
+    if ((p.queda || 0) >= 5) {
+      foto.appendChild(el("span", "caiu", "caiu " + Math.round(p.queda) + "%"));
+    }
     if (p.imagem) {
       var img = document.createElement("img");
       img.src = p.imagem;
@@ -1128,7 +1204,10 @@
     var corpo = el("div", "corpo");
     corpo.appendChild(el("div", "nome", p.nome));
     corpo.appendChild(el("div", "preco", p.preco));
-    corpo.appendChild(el("div", "visto-em", "preço visto em " + p.visto));
+    var rodape = (p.pontos >= 2 && p.desde)
+      ? "preço acompanhado desde " + p.desde
+      : (p.visto ? "preço visto em " + p.visto : "");
+    if (rodape) { corpo.appendChild(el("div", "visto-em", rodape)); }
     e.appendChild(corpo);
     return e;
   }
