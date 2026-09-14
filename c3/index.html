@@ -317,6 +317,32 @@
     padding: 5px 7px; border-radius: 999px;
     box-shadow: 0 1px 4px rgba(0,0,0,.18);
   }
+  
+  .acompanha {
+    display: flex; align-items: center; gap: 6px;
+    font-family: var(--fonte-mono, monospace); font-size: 10.5px;
+    color: var(--fraco); letter-spacing: -.01em;
+    margin-top: 2px; white-space: nowrap;
+  }
+  .pulso {
+    width: 6px; height: 6px; border-radius: 50%; flex: 0 0 6px;
+    background: #16a34a; box-shadow: 0 0 0 0 rgba(22,163,74,.55);
+    animation: bater 2.4s ease-out infinite;
+  }
+  @keyframes bater {
+    70% { box-shadow: 0 0 0 6px rgba(22,163,74,0); }
+    100% { box-shadow: 0 0 0 0 rgba(22,163,74,0); }
+  }
+  @media (prefers-reduced-motion: reduce) { .pulso { animation: none; } }
+
+  
+  .foto::before {
+    content: ""; position: absolute; inset: 0 0 auto 0; height: 46px;
+    background: linear-gradient(rgba(0,0,0,.22), rgba(0,0,0,0));
+    pointer-events: none; opacity: 0;
+  }
+  .produto.caiu-sim .foto::before { opacity: 1; }
+
   .visto-em {
     margin-top: auto;
     font-family: "JetBrains Mono", ui-monospace, monospace;
@@ -413,7 +439,8 @@
       "vendas": 11057,
       "desde": "13/09",
       "pontos": 2,
-      "antes": "R$ 16,50"
+      "antes": "R$ 16,50",
+      "dias": 1
     },
     {
       "nome": "Kit de maquiagem com potes e esponjas de pó",
@@ -426,7 +453,8 @@
       "vendas": 6141,
       "desde": "13/09",
       "pontos": 2,
-      "antes": "R$ 12,79"
+      "antes": "R$ 12,79",
+      "dias": 1
     },
     {
       "nome": "Kit de batons líquidos de longa duração",
@@ -439,7 +467,8 @@
       "vendas": 4818,
       "desde": "13/09",
       "pontos": 2,
-      "antes": "R$ 17,69"
+      "antes": "R$ 17,69",
+      "dias": 1
     },
     {
       "nome": "Estojo de maquiagem de pelúcia de urso",
@@ -452,7 +481,8 @@
       "vendas": 19445,
       "desde": "12/09",
       "pontos": 3,
-      "antes": "R$ 15,99"
+      "antes": "R$ 15,99",
+      "dias": 2
     }
   ],
   "cozinha.internacional": [
@@ -467,7 +497,8 @@
       "vendas": 4202,
       "desde": "12/09",
       "pontos": 3,
-      "antes": "R$ 39,99"
+      "antes": "R$ 39,99",
+      "dias": 2
     },
     {
       "nome": "Descascador de legumes 3 em 1 de inox",
@@ -480,7 +511,8 @@
       "vendas": 8261,
       "desde": "13/09",
       "pontos": 2,
-      "antes": "R$ 13,99"
+      "antes": "R$ 13,99",
+      "dias": 1
     },
     {
       "nome": "Suporte para queijo fatiado de geladeira",
@@ -493,7 +525,8 @@
       "vendas": 1453,
       "desde": "13/09",
       "pontos": 2,
-      "antes": "R$ 22,79"
+      "antes": "R$ 22,79",
+      "dias": 1
     },
     {
       "nome": "Suporte magnético para porta de lavadora",
@@ -506,7 +539,8 @@
       "vendas": 4117,
       "desde": "12/09",
       "pontos": 3,
-      "antes": "R$ 24,99"
+      "antes": "R$ 24,99",
+      "dias": 2
     }
   ],
   "fatura.chora": [
@@ -521,7 +555,8 @@
       "vendas": 4521,
       "desde": "13/09",
       "pontos": 2,
-      "antes": "R$ 122,59"
+      "antes": "R$ 122,59",
+      "dias": 1
     },
     {
       "nome": "Relógio masculino PAAZOMU para estudantes",
@@ -534,7 +569,8 @@
       "vendas": 9467,
       "desde": "12/09",
       "pontos": 3,
-      "antes": "R$ 48,79"
+      "antes": "R$ 48,79",
+      "dias": 2
     },
     {
       "nome": "Caixa de som Bluetooth S18 à prova d'água",
@@ -547,7 +583,8 @@
       "vendas": 2865,
       "desde": "13/09",
       "pontos": 2,
-      "antes": "R$ 43,69"
+      "antes": "R$ 43,69",
+      "dias": 1
     },
     {
       "nome": "Caixa de som Bluetooth ZEALOT S32PRO com LED",
@@ -560,7 +597,8 @@
       "vendas": 4537,
       "desde": "13/09",
       "pontos": 2,
-      "antes": "R$ 112,29"
+      "antes": "R$ 112,29",
+      "dias": 1
     }
   ],
   "achadinhos.instantaneos": [
@@ -575,7 +613,8 @@
       "vendas": 5862,
       "desde": "13/09",
       "pontos": 2,
-      "antes": "R$ 44,59"
+      "antes": "R$ 44,59",
+      "dias": 1
     },
     {
       "nome": "Suporte magnético 360 para celular de carro",
@@ -588,7 +627,8 @@
       "vendas": 17437,
       "desde": "13/09",
       "pontos": 2,
-      "antes": "R$ 17,52"
+      "antes": "R$ 17,52",
+      "dias": 1
     },
     {
       "nome": "Ganchos adesivos de parede para cozinha",
@@ -601,7 +641,8 @@
       "vendas": 7036,
       "desde": "12/09",
       "pontos": 3,
-      "antes": "R$ 11,91"
+      "antes": "R$ 11,91",
+      "dias": 2
     },
     {
       "nome": "Luminária de teto LED redonda e ultrafina",
@@ -614,7 +655,8 @@
       "vendas": 2970,
       "desde": "13/09",
       "pontos": 2,
-      "antes": "R$ 39,29"
+      "antes": "R$ 39,29",
+      "dias": 1
     }
   ],
   "atefalhar": [
@@ -629,7 +671,8 @@
       "vendas": 1148,
       "desde": "13/09",
       "pontos": 2,
-      "antes": "R$ 33,79"
+      "antes": "R$ 33,79",
+      "dias": 1
     },
     {
       "nome": "Faixas Elásticas de Resistência para Glúteos e Coxas",
@@ -642,7 +685,8 @@
       "vendas": 1737,
       "desde": "13/09",
       "pontos": 2,
-      "antes": "R$ 29,69"
+      "antes": "R$ 29,69",
+      "dias": 1
     },
     {
       "nome": "Luva de boxe infantil em PU para treino",
@@ -655,7 +699,8 @@
       "vendas": 901,
       "desde": "13/09",
       "pontos": 2,
-      "antes": "R$ 20,45"
+      "antes": "R$ 20,45",
+      "dias": 1
     },
     {
       "nome": "Luva de ciclismo fechada com touch screen",
@@ -668,7 +713,8 @@
       "vendas": 1711,
       "desde": "13/09",
       "pontos": 2,
-      "antes": "R$ 20,25"
+      "antes": "R$ 20,25",
+      "dias": 1
     }
   ],
   "_todos": [
@@ -1233,6 +1279,7 @@
     }
     var foto = el("div", "foto");
     if ((p.queda || 0) >= 5) {
+      e.classList.add("caiu-sim");
       foto.appendChild(el("span", "caiu", "caiu " + Math.round(p.queda) + "%"));
     }
     if (p.imagem) {
@@ -1257,10 +1304,18 @@
       linha_preco.appendChild(el("s", "antes", p.antes));
     }
     corpo.appendChild(linha_preco);
-    var rodape = (p.pontos >= 2 && p.desde)
-      ? "preço acompanhado desde " + p.desde
-      : (p.visto ? "preço visto em " + p.visto : "");
-    if (rodape) { corpo.appendChild(el("div", "visto-em", rodape)); }
+    if (p.pontos >= 2 && p.dias >= 0) {
+      var ac = el("div", "acompanha");
+      ac.appendChild(el("span", "pulso"));
+      var quanto = p.dias <= 0
+        ? "acompanhando desde hoje"
+        : (p.dias === 1 ? "acompanhando há 1 dia"
+                        : "acompanhando há " + p.dias + " dias");
+      ac.appendChild(el("span", null, quanto));
+      corpo.appendChild(ac);
+    } else if (p.visto) {
+      corpo.appendChild(el("div", "visto-em", "preço visto em " + p.visto));
+    }
     e.appendChild(corpo);
     return e;
   }
