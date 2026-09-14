@@ -886,8 +886,6 @@
   document.getElementById("rolar").addEventListener("click", function () {
     var alvo = document.querySelector(".produtos");
     if (alvo) { alvo.scrollIntoView({ behavior: "smooth", block: "start" }); }
-    medir("clique", { canal: CANAIS[atual].banco, tipo: "rolar",
-                      rotulo: "ver os de hoje" });
   });
   function montarProduto(p) {
     var falta = (p.link === FALTA);
