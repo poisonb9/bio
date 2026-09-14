@@ -882,20 +882,29 @@
     outros.innerHTML = "";
     var jaVistos = {};
     lista_do_canal.forEach(function (p) { jaVistos[p.link] = 1; });
-    [["No Achadinho Total", PRODUTOS_REAIS["_todos"] || [], null],
-     ["No Achadinho Chef", PRODUTOS_REAIS["cozinha.internacional"] || [],
-      "cozinha.internacional"]].forEach(function (bloco) {
-      if (bloco[2] && bloco[2] === atual) { return; }
-      var itens = bloco[1].filter(function (p) { return !jaVistos[p.link]; });
-      if (!itens.length) { return; }
-      itens = itens.slice(0, 4);
-      itens.forEach(function (p) { jaVistos[p.link] = 1; });
+
+    function pegar(lista, quantos) {
+      var fora = [];
+      (lista || []).forEach(function (p) {
+        if (fora.length >= quantos || jaVistos[p.link]) { return; }
+        jaVistos[p.link] = 1;
+        fora.push(p);
+      });
+      return fora;
+    }
+    var doChef = atual === "cozinha.internacional" ? []
+      : pegar(PRODUTOS_REAIS["cozinha.internacional"], 4);
+    var doTotal = pegar(PRODUTOS_REAIS["_todos"], 4);
+
+    [["No Achadinho Total", doTotal],
+     ["No Achadinho Chef", doChef]].forEach(function (bloco) {
+      if (!bloco[1].length) { return; }
       var sec = el("section", "produtos");
       var cab = el("div", "cabeca");
       cab.appendChild(el("h2", null, bloco[0]));
       sec.appendChild(cab);
       var g = el("div", "vitrine");
-      itens.forEach(function (p) { g.appendChild(montarProduto(p)); });
+      bloco[1].forEach(function (p) { g.appendChild(montarProduto(p)); });
       sec.appendChild(g);
       outros.appendChild(sec);
     });
