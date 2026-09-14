@@ -357,7 +357,9 @@
   }
   
   
-  .produto .corpo { display: flex; flex-direction: column; height: 100%; }
+  .vitrine { align-items: stretch; }
+  .produto { height: 100%; }
+  .produto .corpo { display: flex; flex-direction: column; flex: 1 1 auto; }
   .produto .preco { margin-top: auto; }
   .acompanha {
     display: flex; align-items: center; gap: 6px;
@@ -770,7 +772,8 @@
       "vendas": 11057,
       "desde": "13/09",
       "pontos": 2,
-      "antes": "R$ 16,50"
+      "antes": "R$ 16,50",
+      "dias": 1
     },
     {
       "nome": "Kit de maquiagem com potes e esponjas de pó",
@@ -783,7 +786,8 @@
       "vendas": 6141,
       "desde": "13/09",
       "pontos": 2,
-      "antes": "R$ 12,79"
+      "antes": "R$ 12,79",
+      "dias": 1
     },
     {
       "nome": "Kit de batons líquidos de longa duração",
@@ -796,7 +800,8 @@
       "vendas": 4818,
       "desde": "13/09",
       "pontos": 2,
-      "antes": "R$ 17,69"
+      "antes": "R$ 17,69",
+      "dias": 1
     },
     {
       "nome": "Estojo de maquiagem de pelúcia de urso",
@@ -809,7 +814,8 @@
       "vendas": 19445,
       "desde": "12/09",
       "pontos": 3,
-      "antes": "R$ 15,99"
+      "antes": "R$ 15,99",
+      "dias": 2
     },
     {
       "nome": "Cílios postiços Gege Bear Sunflower",
@@ -822,7 +828,8 @@
       "vendas": 14960,
       "desde": "13/09",
       "pontos": 2,
-      "antes": "R$ 14,10"
+      "antes": "R$ 14,10",
+      "dias": 1
     },
     {
       "nome": "Lanterna LED de silicone recarregável USB",
@@ -835,7 +842,8 @@
       "vendas": 4202,
       "desde": "12/09",
       "pontos": 3,
-      "antes": "R$ 39,99"
+      "antes": "R$ 39,99",
+      "dias": 2
     },
     {
       "nome": "Descascador de legumes 3 em 1 de inox",
@@ -848,7 +856,8 @@
       "vendas": 8261,
       "desde": "13/09",
       "pontos": 2,
-      "antes": "R$ 13,99"
+      "antes": "R$ 13,99",
+      "dias": 1
     },
     {
       "nome": "Suporte para queijo fatiado de geladeira",
@@ -861,7 +870,8 @@
       "vendas": 1453,
       "desde": "13/09",
       "pontos": 2,
-      "antes": "R$ 22,79"
+      "antes": "R$ 22,79",
+      "dias": 1
     },
     {
       "nome": "Suporte magnético para porta de lavadora",
@@ -874,7 +884,8 @@
       "vendas": 4117,
       "desde": "12/09",
       "pontos": 3,
-      "antes": "R$ 24,99"
+      "antes": "R$ 24,99",
+      "dias": 2
     },
     {
       "nome": "Pote de vidro hermético com tampa de bambu",
@@ -887,7 +898,8 @@
       "vendas": 526,
       "desde": "13/09",
       "pontos": 2,
-      "antes": "R$ 24,99"
+      "antes": "R$ 24,99",
+      "dias": 1
     },
     {
       "nome": "Caixa de som Bluetooth Lenovo C02",
@@ -900,7 +912,8 @@
       "vendas": 4521,
       "desde": "13/09",
       "pontos": 2,
-      "antes": "R$ 122,59"
+      "antes": "R$ 122,59",
+      "dias": 1
     },
     {
       "nome": "Relógio masculino PAAZOMU para estudantes",
@@ -913,7 +926,8 @@
       "vendas": 9467,
       "desde": "12/09",
       "pontos": 3,
-      "antes": "R$ 48,79"
+      "antes": "R$ 48,79",
+      "dias": 2
     }
   ],
   "_ordem": [
@@ -1377,7 +1391,7 @@
       linha_preco.appendChild(el("s", "antes", p.antes));
     }
     corpo.appendChild(linha_preco);
-    if (p.pontos >= 2 && p.dias >= 0) {
+    if (!eNovo) {
       var ac = el("div", "acompanha");
       ac.appendChild(el("span", "pulso"));
       var quanto = p.dias <= 0
