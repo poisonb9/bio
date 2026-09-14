@@ -430,7 +430,7 @@
       <p class="marca" id="marca"></p>
       <h1 class="chamada" id="chamada"></h1>
       
-      <a class="vivo" id="vivo_link" rel="noopener" target="_blank">
+      <a class="vivo" id="vivo_link" rel="noopener">
         <span class="oque" id="vivo_nome"></span>
         <span class="quanto" id="vivo_preco"></span>
         <span class="dica" id="vivo_dica"></span>
@@ -1233,7 +1233,7 @@
     var falta = (href === FALTA);
     var e = document.createElement(falta ? "div" : "a");
     e.className = "botao" + (falta ? " desligado" : "");
-    if (!falta) { e.href = href; e.target = "_blank"; e.rel = "noopener"; }
+    if (!falta) { e.href = href; e.rel = "noopener"; }
     e.appendChild(miniatura(selo));
     var r = el("span", "rotulo", rotulo);
     if (falta) r.appendChild(el("span", "marcador", "falta o link"));
@@ -1355,7 +1355,7 @@
     var e = document.createElement(falta ? "div" : "a");
     e.className = "produto";
     if (!falta) {
-      e.href = p.link; e.target = "_blank"; e.rel = "noopener";
+      e.href = p.link; e.rel = "noopener";
       e.addEventListener("click", function () {
         medir("clique", { canal: CANAIS[atual].banco,
                           tipo: "produto", rotulo: p.nome });
@@ -1470,7 +1470,6 @@
     comFoto.concat(comFoto).forEach(function (p) {
       var a = document.createElement("a");
       a.href = p.link;
-      a.target = "_blank";
       a.rel = "noopener";
       var img = document.createElement("img");
       img.src = p.imagem;
