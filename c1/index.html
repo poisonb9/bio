@@ -137,6 +137,34 @@
   }
   @keyframes piscar { 50% { opacity: 0; } }
   
+  
+  .vivo .quanto.entrando {
+    animation: impulso .52s cubic-bezier(.2,1.5,.3,1) both;
+  }
+  @keyframes impulso {
+    0%   { transform: scale(.72); opacity: 0; }
+    58%  { transform: scale(1.1);  opacity: 1; }
+    100% { transform: scale(1);    opacity: 1; }
+  }
+  .vivo .caiu-aqui { animation: chegar .5s .18s backwards; }
+  @keyframes chegar {
+    0%   { transform: scale(.4) rotate(-14deg); opacity: 0; }
+    100% { transform: scale(1) rotate(0); opacity: 1; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .vivo .quanto.entrando, .vivo .caiu-aqui { animation: none; }
+  }
+
+  
+  .novo {
+    position: absolute; top: 7px; right: 7px; z-index: 1;
+    background: #16a34a; color: #fff;
+    font: 700 10.5px/1 var(--fonte-mono, monospace);
+    padding: 5px 8px; border-radius: 999px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.18);
+  }
+  .achado-hoje { color: #16a34a; }
+
   .vivo .antes {
     font-size: 12px; color: var(--fraco); margin-left: 8px;
     font-weight: 400; text-decoration-thickness: 1px;
@@ -1265,6 +1293,9 @@
           ((p.queda || 0) >= 5
             ? '<span class="caiu-aqui">↓ ' + Math.round(p.queda) + '%</span>'
             : "");
+        alvoPreco.classList.remove("entrando");
+        void alvoPreco.offsetWidth;
+        alvoPreco.classList.add("entrando");
         relogioVivo = setTimeout(proximo, 2500);
       })();
     }
@@ -1315,6 +1346,11 @@
       });
     }
     var foto = el("div", "foto");
+    var eNovo = !(p.pontos >= 2);
+    if (eNovo) {
+      e.classList.add("caiu-sim");   // o degrade ajuda a ler o selo
+      foto.appendChild(el("span", "novo", "achado novo"));
+    }
     if ((p.queda || 0) >= 5) {
       e.classList.add("caiu-sim");
       foto.appendChild(el("span", "caiu", "caiu " + Math.round(p.queda) + "%"));
@@ -1350,8 +1386,11 @@
                         : "acompanhando há " + p.dias + " dias");
       ac.appendChild(el("span", null, quanto));
       corpo.appendChild(ac);
-    } else if (p.visto) {
-      corpo.appendChild(el("div", "visto-em", "preço visto em " + p.visto));
+    } else {
+      var novoRod = el("div", "acompanha achado-hoje");
+      novoRod.appendChild(el("span", "pulso"));
+      novoRod.appendChild(el("span", null, "achado agora — começando a acompanhar"));
+      corpo.appendChild(novoRod);
     }
     e.appendChild(corpo);
     return e;
