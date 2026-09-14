@@ -843,6 +843,7 @@
   var relogioVivo = null;
 
   function animarVitrine(itens) {
+    itensVivos = itens || [];
     var alvoNome = document.getElementById("vivo_nome");
     var alvoPreco = document.getElementById("vivo_preco");
     var alvoDica = document.getElementById("vivo_dica");
@@ -899,12 +900,18 @@
   }
 
   var vivoAtual = null;
+  var retomarVivo = null;
+  var itensVivos = [];
 
   (function () {
     var alvo = document.getElementById("vivo_link");
     ["pointerdown", "touchstart"].forEach(function (ev) {
       alvo.addEventListener(ev, function () {
         if (relogioVivo) { clearTimeout(relogioVivo); relogioVivo = null; }
+        if (retomarVivo) { clearTimeout(retomarVivo); }
+        retomarVivo = setTimeout(function () {
+          if (!relogioVivo) { animarVitrine(itensVivos); }
+        }, 6000);
       }, { passive: true });
     });
     alvo.addEventListener("click", function () {
