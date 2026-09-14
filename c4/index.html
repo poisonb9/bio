@@ -9,6 +9,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
   :root {
+    
+    --respiro: 18px;
     --tinta:       #141218;
     --tinta-fraca: #5B5563;
     --fundo:       #F7F6F8;
@@ -46,7 +48,10 @@
 
   * { box-sizing: border-box; }
 
+  
+  html { overflow-x: clip; }
   body {
+    overflow-x: clip;
     margin: 0;
     background: var(--fundo);
     color: var(--tinta);
@@ -56,7 +61,7 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  .envelope { max-width: 440px; margin: 0 auto; padding: 18px 18px 56px; }
+  .envelope { max-width: 440px; margin: 0 auto; padding: var(--respiro) var(--respiro) 56px; }
 
   
   .previa {
@@ -160,7 +165,8 @@
 
   
   .esteira {
-    margin: 14px -20px 2px; overflow: hidden;
+    
+    margin: 14px calc(var(--respiro) * -1) 2px; overflow: hidden;
     -webkit-mask-image: linear-gradient(90deg, transparent,
       #000 8%, #000 92%, transparent);
     mask-image: linear-gradient(90deg, transparent,
