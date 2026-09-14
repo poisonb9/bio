@@ -111,8 +111,9 @@
   }
   .chamada em { font-style: normal; color: var(--acento); }
   
+  
   .vivo {
-    min-height: 62px; display: flex; flex-direction: column;
+    height: 98px; display: flex; flex-direction: column;
     align-items: center; justify-content: center; gap: 3px;
     margin: 0 auto 14px; max-width: 30ch;
   }
@@ -120,7 +121,12 @@
   
   .vivo[href] { padding: 6px 10px; border-radius: 12px; }
   .vivo[href]:active { background: var(--tinta-mais-fraca, rgba(0,0,0,.05)); }
-  .vivo .oque { font-size: 14.5px; line-height: 1.25; color: var(--tinta); }
+  .vivo .oque {
+    font-size: 14.5px; line-height: 1.25; color: var(--tinta);
+    
+    height: 36px; overflow: hidden;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  }
   .vivo .dica {
     font-size: 11.5px; color: var(--fraco); letter-spacing: .04em;
   }
@@ -130,7 +136,9 @@
     animation: piscar 1.05s step-end infinite;
   }
   @keyframes piscar { 50% { opacity: 0; } }
+  
   .vivo .quanto {
+    height: 24px;
     font: 700 21px/1 var(--fonte-mono, monospace); color: var(--acento);
   }
   .rolar {
@@ -369,7 +377,7 @@
   
   <div id="outros"></div>
 
-  <footer class="rodape" id="rodape"></footer>
+  
 </div>
 
 <script>
@@ -1284,9 +1292,6 @@
     }
 
     animarVitrine(lista_do_canal.concat(doTotal));
-
-    document.getElementById("rodape").textContent =
-      c.arroba + " · conteúdo produzido com apoio de IA";
 
     Array.prototype.forEach.call(document.querySelectorAll(".aba"), function (a) {
       a.setAttribute("aria-pressed", String(a.dataset.canal === chave));
