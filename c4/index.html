@@ -350,6 +350,16 @@
     text-decoration-thickness: 1px;
   }
   
+  
+  .serie { display: block; width: 100%; height: 22px; margin-top: 2px; }
+  .serie .linha {
+    fill: none; stroke: var(--tinta-fraca); stroke-width: 1.4;
+    stroke-linejoin: round; stroke-linecap: round; opacity: .7;
+  }
+  .serie .agora { fill: var(--tinta-fraca); }
+  
+  .serie.baixou .linha { stroke: var(--acento); opacity: 1; }
+  .serie.baixou .agora { fill: var(--acento); }
   .foto { position: relative; }
   .caiu {
     position: absolute; top: 7px; left: 7px; z-index: 1;
@@ -493,6 +503,7 @@
       "vendas": 19750,
       "desde": "12/09",
       "pontos": 2,
+      "serie": [],
       "antes": "R$ 49,19",
       "dias": 3
     },
@@ -507,6 +518,20 @@
       "vendas": 24044,
       "desde": "12/09",
       "pontos": 3,
+      "serie": [
+        [
+          "09-12",
+          29.79
+        ],
+        [
+          "09-13",
+          29.79
+        ],
+        [
+          "09-14",
+          30.39
+        ]
+      ],
       "antes": "",
       "dias": 3
     },
@@ -521,6 +546,7 @@
       "vendas": 10607,
       "desde": "14/09",
       "pontos": 1,
+      "serie": [],
       "antes": "",
       "dias": 1
     },
@@ -535,6 +561,20 @@
       "vendas": 21031,
       "desde": "12/09",
       "pontos": 3,
+      "serie": [
+        [
+          "09-12",
+          25.05
+        ],
+        [
+          "09-13",
+          25.05
+        ],
+        [
+          "09-14",
+          24.24
+        ]
+      ],
       "antes": "",
       "dias": 3
     }
@@ -547,10 +587,11 @@
       "visto": "14/09",
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4kGxKFtR47EqBwvj5RJhn9k9c4gZON4VqMEwHywUs523EFSWRtJMRUY3FWZfuvGD7x72CMCalZjyXc9UkQhjFAjTrh8H8aQIAq0Epy0VRtxrhzYx4Ukg4yRithCpT7op3XzV0idMuQ5pejz1z0jdvsXCRZY6RYZnClQETNhYqMFdNLxmEbDstDN1hGjZOxLX9gRkQBCFQlbImfh1KTPBgq4yad9fyo3GoBKsf6chpvwIs0UkzbzJ0r7EnOTbEvHeyUKL9iOMb04yMvUakM4hbOcGnK94U0t1Jsbe2aNvc2FrHaVk80OEqp7APAMg9uPN2oy6fJVj0Bz2e0IoQyzJ83VZc1ag6Vcnk0rO7uEydIDSPE97lKTbhJqSdgO0M7iRC6UypFG970Hw5bWI4r3LjST6PecW8pGP5727SW1G9l5lDXeR7cFCoX1QzKjVlbJlELXLdtnAVwAp1u0g8ciW47RaW6wKOvXa8xfXmeJCBDB7ke5vh731c4SRYjVWRy00yul16GBn1puX0HAwS0goaqxb07D4SQn5RCh4gcBrVeSeTU3N5TaRcaJyMoO53BGnprBXCVEmxdymJoj4tNsd4s8AlmRk0KXIOMNx1esbD9K5JGsh7pMX6CCPtavFMDf9P0TbEnRT4dvKJIGJcn9r9JSpN6SjttIsNbc3rYwTxN3nSxg8GfybsNBwZUXpp88ThOHzFoayK9AYRO",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/Sc32fdfe302d64e9ea4a12169a7cfdefdi.jpg",
-      "queda": 51.9,
+      "queda": 0.0,
       "vendas": 47156,
       "desde": "14/09",
       "pontos": 1,
+      "serie": [],
       "antes": "",
       "dias": 1
     },
@@ -565,6 +606,7 @@
       "vendas": 15212,
       "desde": "13/09",
       "pontos": 2,
+      "serie": [],
       "antes": "",
       "dias": 2
     },
@@ -579,6 +621,7 @@
       "vendas": 3650,
       "desde": "14/09",
       "pontos": 1,
+      "serie": [],
       "antes": "",
       "dias": 1
     },
@@ -593,6 +636,20 @@
       "vendas": 23980,
       "desde": "12/09",
       "pontos": 3,
+      "serie": [
+        [
+          "09-12",
+          15.24
+        ],
+        [
+          "09-13",
+          15.24
+        ],
+        [
+          "09-14",
+          15.59
+        ]
+      ],
       "antes": "",
       "dias": 3
     }
@@ -605,10 +662,24 @@
       "visto": "14/09",
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4oFmV3KKh3b1dRHxLOmwGay5oscTngMcI0OBKRXPyZ9BPHgPQ2ZAlp8IuM4HpyqjysxsTkwe7XCR5eyVGQs9g7TVhKbQ3kHIU6reNawO69dNyaKoU6QHOzwfIBkC18e4nF7JX84mWuCabWqJSbgWPcXTFBKWdDUt2rVwuSBtVxbLyv9JclMuksL9vqEpXX9aoUJZvTJFAYvhr8AK399hwrJA35v4wzM9uQLpfQTyavSncIExD4SunuozBv1KpBHtVuX2wEsMXOmMK64JnhjQ9SUrqG4QhRKUwlY2ODe6og6a60JLtLRGPjMSaNzXJz6qjDVGIPlByPanCC4JJGc9OLjz3dyux971fqWDfbQQj7tsPC1HRoxcjkosMmheY81ecWI8ov6Y8NJiTo4p4ogfsJAPAkSmc9Z1TrMBo35evi7c1CDHaNbl6VRqdzjd0dZ6ivg46QaZhrxOwUGEqCXmLNAn4m68uriwDAzutrui0F0YOkyKuVVkIk2IQyc0CwqbuT1gzrrVZmbWuKQ2EZk0NH0mIgct4cWa9VvSXEX0wxRUaKGhJWCvMc9mISdhMNIOlLp98UBqYJHyJPn5BpnGvlUxS3nyuT1xjfXSbBHoP5pcrZ1OBfXrTp2XkWSN6fFSBcPOGhvNKQJO33nSHlzkPIO02MKrhHQqJ2ud1wmVQEZBoAg4zoBlBMsQBT7KsKq8rDbJVQ81xkrtUM",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/S4f76a25cb5c540a08cc8af33addebcf7E.png",
-      "queda": 32.1,
+      "queda": 0.0,
       "vendas": 66529,
       "desde": "12/09",
       "pontos": 3,
+      "serie": [
+        [
+          "09-12",
+          36.59
+        ],
+        [
+          "09-13",
+          36.59
+        ],
+        [
+          "09-14",
+          37.19
+        ]
+      ],
       "antes": "",
       "dias": 3
     },
@@ -619,10 +690,11 @@
       "visto": "14/09",
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4kJJZTePgwZNLsUeSHrLbryobQ35GzCaJiqNnbu6U1VExiREHf8g5Hklj7ge31L9r1QJMyjPsUMwThsM4Ts5TVgMg5vgWtJQeEQgKCdmuKMt0esrXUkQJYHtm4AJKFmwmG5K2oSaAYclSgzeHlh4mRO9JjGEymOUZBbsfJ7djMdwYhRf0NgtwSM8A9DziknvrPMtxmRs5ZE7D0hdKzMZoNH2BVc3Q28hE73IMVbpzg0zaf90ihSgZ4MEwSYzkNIP9bcSFYPRhgHrE4UJ7BmDMvE52l4m0EMYezm9RXQaFExWzRv03RwFtXinSaIam8uy88axM8Vdi1QN1xNlRzamiTKJVN2gup2dMmPJAet5wFkzaLeYN346oT6NNaoXQeEDMyVxw4f5v1GfyDje787PvF4f5k0L1rnhMtulROtEN4mqweghv1PDAz7jGxVCO2BhL4tWJdBgUiBMHjSub0b3lT4onKLKhfWvGYz8A7xHQ6hITTrKDkoaY0uidt4g54hvKrwZG9yRKDFC8292nUv14CqepZbbno9ttYeBpN2nLulDBxnqaofD7yvDlQl8OVVbGlBEc2KKJWfyOWFgFOCucIUyXuC3uNlgkhFSyO8ndZZxUyKWPWVswJflNGiFKGkQC4LPzRNQsgMIyL6TvjMIUpMoNH1ifW2RNLzgqkpo5m3NDt4rcCwmTOnME2PsvTPGiIGPJtr7NVj4ys",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/S3c53b404e11f4b8f805e8f8679d2ca94N.jpg",
-      "queda": 34.0,
+      "queda": 0.0,
       "vendas": 67224,
       "desde": "14/09",
       "pontos": 1,
+      "serie": [],
       "antes": "",
       "dias": 1
     },
@@ -633,10 +705,11 @@
       "visto": "14/09",
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4kWEPq2MmFFzz6UuAtThDxiva5OutGMg9vnDqFCBXyYU9NTlnhPF6ukai9GjOMiov5dhaLzGxvWaJ1eLkpTo9HuUYY22Howh0rKRCszb5GDm7pPWqmfmkKzvufUzDTCWEgiPzS1gQiqLj3TetZrnSyqBEIXhetrAQVKMbKPw0vca0npan46h6bsmsrwLFhK7EY743JM5022XrqNfjFwix8nlgPleN0qBmLDAm6j2unL65zqArI3y3TYnSp18wSGgYrxM1vshFnxtgSAqlrvOHNwMjYOEhbXnUuv93Yc6ZQ0REhFArTZUhyon0Gozqd6YOOyW7yLjOMwO5lBgHt1TJOZTpapTiMS3OA1vR7BbFBKlV12TWzwrgN6iMyq4zVY6kDr3PVCv6JHODkTuVhAKZswnAwxufrzdodoWX9oZQTxxh0QIh1HmZPPUReG7Bk7SUGZi1Do2AZ8heAbnqJLvOXUgQCGXqJE9bqNiyB5x3QHBIdvZyBq24lbmUxw46IytdxI3ehu4Mf7YrIphI4IyXqOonxkqbA5NnXNkFwZyCf8cU9OlxOl3m67Su8046fqwztCFUtrgkqRHPcBNc99EWPJI0qbBf9RA5EQxNRbXxv5ca72qnNlsq11zh3Z7AMEGPvc3TBB0rtCxTYvyRYzOKWovSRmyiwdK0nldEc8MAQabcV5EFifb1Gbku67YPifVPfKEZcncJOjq00",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/S92eac2f1562844b498bc5c143e8b3f11n.jpg",
-      "queda": 37.0,
+      "queda": 0.0,
       "vendas": 49684,
       "desde": "14/09",
       "pontos": 1,
+      "serie": [],
       "antes": "",
       "dias": 1
     },
@@ -647,10 +720,11 @@
       "visto": "14/09",
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4mMPyWT4D7jpZbSSjgSKZuSyi6bxQmVEHNdLPHikjZPqJGwEWKhMyWq7F9AO10zNZekBBwCws7p5RKxfFmsp75sunzwEgDT7VPfOkXFmEAonq5sSwkptTOJdchm7Hg6UvEUkYDb12MoUYm6aE9ZiraVy8gwjFw5W4HPsj9IEjXAQkxos9uzWkqXR8Xt3328NOVYP9SiV05nsFK38wEpqK54ujM0ifmfd5JEczMWHKZE8URQwMUm1RSBrKzjRBlQgDuoVRYAziK7pFdELKkDazuez5AXL3c9rDcaFLqS7uPlHc92Oy1zBT7tPDOdcqyBtYSDICXszxREEetNMnHR0HEMVCB4Kr5zKMzT1c2KFCo0nYfHQvIUnIynso5zfgsCD0EgdoGLzJ3AhtaJjYe81jZebGvVCYuJTClK07qZS9vAaVntgo4BRuVdj0MYLOmh4k9eaMUooX29UwhB1Vp8XcO2HSLle8vK57vjjQaMKxn8RgDuDARwU50fuanNhSHRG6EDefrhiZg50O5246Sv5KvwnCRs5iGO4ksEsUnufJDoExlqXrgTiAXk15rYRrqI0ewzDIfEjWuen9N0qDUfGVv79GfkCi8Zo7eReD6gKM8t9VAOnZnVqevz45sfnRK9FjU6TOiXbiRUb4aYPDVp583yZVBg8rWFuHIf1GcLgaC597Mbm7HEV9tDpQxZwG9mmdg6sC2AeuGPFZQ",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/Se58f51e59e454edaa5634ff84a66468bK.png",
-      "queda": 36.3,
+      "queda": 2.4,
       "vendas": 48532,
       "desde": "12/09",
       "pontos": 2,
+      "serie": [],
       "antes": "R$ 31,99",
       "dias": 3
     }
@@ -667,6 +741,7 @@
       "vendas": 17659,
       "desde": "14/09",
       "pontos": 1,
+      "serie": [],
       "antes": "",
       "dias": 1
     },
@@ -677,10 +752,11 @@
       "visto": "14/09",
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4m8bwTeehfHULj4d5x02yPdDT6dHyPXdkTHoR18HNPLQiPhephPsISAKz8VvxQ4dOxm89I9FhxzGlGG6BsXy5IZx3yAETZrmbRo7HzpNBOu3LPBb9d4rVuHgckcxdbo3nyaVN0KjeeTt0mQIWmWPjvlHiEaNQ2Z1YNnNUJp7dE7C21YdiglFddceQC31BzZvZUlwIp1xg4GvrOZKHkpX9wqrqKxNt0AMFVDbNZkrrzZrnWWqQXGItBFjn4aKLROKOzrhRyuAlJwgJVyzUh1yQfuch7yUqar7bsHxYtxSn3G2hMkD3hZUvWK9Z7h2fVLjAJV9zyc80XgO3tqxGdoiCR8VxMPveo4ikHDlljP3SfMpe1nVQPQtM2d7MXogL0tpRu1PLnGc12gKs4quBzpUF4kslG46Y7Nl3tuSOIvcEbKU09y2RoVLNgvetPhzPOdDfQDfpjFkTwp27szj2hNjnAEZ4ASFpmfSH53cn1LrLscgK8x4PsXLMFCskUHMTwUNpoEM8LsZfqvNu5ScPKo8obOiC8xPJMqONiMPCe8TtJA7fwS8CjsSu9HDo60oP9oqr7LewnFMFBINeqNgkj22E1dDlFj97sO1v2e7DsWSrzReGmiHVfT0GmorOE4Lv14mJMcq5ljlY3gIBkslPPDEHFWV1uLhzDM8I9dQ7Us0KS7dBl0u5IiuUX80H9EhoNrowJmZ6Sp8UWVs2p",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/S68bc844cef4e43d8aa593135470f1af6x.jpg",
-      "queda": 18.0,
+      "queda": 0.0,
       "vendas": 55441,
       "desde": "14/09",
       "pontos": 1,
+      "serie": [],
       "antes": "",
       "dias": 1
     },
@@ -691,10 +767,11 @@
       "visto": "14/09",
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4FCFyZpoQpSqmvux3Ousa6uwygvqrfe862zW9j0Y5HhBEx9n6XG54LtmitPEzVKPR7UuHRKAzEgE6u9vm4zhWHKHpNv8xMjlfloGeX8xn180b5ffD4a39dhTAuX3kmOWTSLvufVoLqrea4dWtYkBWtcUGenx8dZUxMTu40u7HQJlQpKFUqiU87Gcz4XtWqALK0LQ1u2NKsrw4bpWGnyJkWJFTioTFu4dzQ9LHiQQL1ASKbfLSsvmAfArm2HZIrra94L9J4WlgL0NDVdAqKL3mbhseOzXs8NM7rUcSk5x64YmT6XqQ9hQI9WlZsWaBYJNikBOJv3BNm8ud356vJowNNhp0nqtzFakCVd6ieImx0orL9kZrnJuG6cRIwx7L3su8yNIHUJvUAIe44SCQPewh7jtrQXXNr00fJbp2w0oUuxeCB8k6iLVcCPE11iv5TktltvjtKEhk6hJ1e3R8uEOFYRIXacRStOKoLL30IIuFnkd20tvKmsnf8lHaaH7sYsLS7dcGlWAzwbmrY8iE1pf9Fv7Pb5yAdjcVyWDCF0eRc0r3CJLkhrkhOkDSPWkQJc6SizIW5VlOQn5vbYbBMPCbxVh8f9uaPa4W2wIbbhSIAM7HSTJIPT0ZxJztUz8ehvEZ8sK7tyoWq3Y0lrWVsMumjMQfHHcSMN85Q8SLG2Zk8f3KZHO7n4Io1uxh9nTNrtfyTjQysBABuhz1q",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/S29070c251fc1413080d4ed0e94e3f00au.jpg",
-      "queda": 32.2,
+      "queda": 0.0,
       "vendas": 50701,
       "desde": "13/09",
       "pontos": 2,
+      "serie": [],
       "antes": "",
       "dias": 2
     },
@@ -709,6 +786,7 @@
       "vendas": 23035,
       "desde": "14/09",
       "pontos": 1,
+      "serie": [],
       "antes": "",
       "dias": 1
     }
@@ -725,6 +803,20 @@
       "vendas": 7321,
       "desde": "12/09",
       "pontos": 3,
+      "serie": [
+        [
+          "09-12",
+          103.59
+        ],
+        [
+          "09-13",
+          103.59
+        ],
+        [
+          "09-14",
+          98.6
+        ]
+      ],
       "antes": "R$ 103,59",
       "dias": 3
     },
@@ -739,6 +831,7 @@
       "vendas": 7085,
       "desde": "14/09",
       "pontos": 1,
+      "serie": [],
       "antes": "",
       "dias": 1
     },
@@ -753,6 +846,20 @@
       "vendas": 3053,
       "desde": "12/09",
       "pontos": 3,
+      "serie": [
+        [
+          "09-12",
+          132.99
+        ],
+        [
+          "09-13",
+          132.99
+        ],
+        [
+          "09-14",
+          135.59
+        ]
+      ],
       "antes": "",
       "dias": 3
     },
@@ -767,6 +874,7 @@
       "vendas": 5714,
       "desde": "14/09",
       "pontos": 1,
+      "serie": [],
       "antes": "",
       "dias": 1
     }
@@ -783,6 +891,7 @@
       "vendas": 19750,
       "desde": "12/09",
       "pontos": 2,
+      "serie": [],
       "antes": "R$ 49,19",
       "dias": 3
     },
@@ -797,6 +906,20 @@
       "vendas": 24044,
       "desde": "12/09",
       "pontos": 3,
+      "serie": [
+        [
+          "09-12",
+          29.79
+        ],
+        [
+          "09-13",
+          29.79
+        ],
+        [
+          "09-14",
+          30.39
+        ]
+      ],
       "antes": "",
       "dias": 3
     },
@@ -811,6 +934,7 @@
       "vendas": 10607,
       "desde": "14/09",
       "pontos": 1,
+      "serie": [],
       "antes": "",
       "dias": 1
     },
@@ -825,6 +949,20 @@
       "vendas": 21031,
       "desde": "12/09",
       "pontos": 3,
+      "serie": [
+        [
+          "09-12",
+          25.05
+        ],
+        [
+          "09-13",
+          25.05
+        ],
+        [
+          "09-14",
+          24.24
+        ]
+      ],
       "antes": "",
       "dias": 3
     },
@@ -839,6 +977,7 @@
       "vendas": 9629,
       "desde": "14/09",
       "pontos": 1,
+      "serie": [],
       "antes": "",
       "dias": 1
     },
@@ -853,6 +992,7 @@
       "vendas": 3688,
       "desde": "14/09",
       "pontos": 1,
+      "serie": [],
       "antes": "",
       "dias": 1
     },
@@ -867,6 +1007,7 @@
       "vendas": 19147,
       "desde": "12/09",
       "pontos": 2,
+      "serie": [],
       "antes": "",
       "dias": 3
     },
@@ -881,6 +1022,7 @@
       "vendas": 16452,
       "desde": "14/09",
       "pontos": 1,
+      "serie": [],
       "antes": "",
       "dias": 1
     },
@@ -891,10 +1033,11 @@
       "visto": "14/09",
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4kGxKFtR47EqBwvj5RJhn9k9c4gZON4VqMEwHywUs523EFSWRtJMRUY3FWZfuvGD7x72CMCalZjyXc9UkQhjFAjTrh8H8aQIAq0Epy0VRtxrhzYx4Ukg4yRithCpT7op3XzV0idMuQ5pejz1z0jdvsXCRZY6RYZnClQETNhYqMFdNLxmEbDstDN1hGjZOxLX9gRkQBCFQlbImfh1KTPBgq4yad9fyo3GoBKsf6chpvwIs0UkzbzJ0r7EnOTbEvHeyUKL9iOMb04yMvUakM4hbOcGnK94U0t1Jsbe2aNvc2FrHaVk80OEqp7APAMg9uPN2oy6fJVj0Bz2e0IoQyzJ83VZc1ag6Vcnk0rO7uEydIDSPE97lKTbhJqSdgO0M7iRC6UypFG970Hw5bWI4r3LjST6PecW8pGP5727SW1G9l5lDXeR7cFCoX1QzKjVlbJlELXLdtnAVwAp1u0g8ciW47RaW6wKOvXa8xfXmeJCBDB7ke5vh731c4SRYjVWRy00yul16GBn1puX0HAwS0goaqxb07D4SQn5RCh4gcBrVeSeTU3N5TaRcaJyMoO53BGnprBXCVEmxdymJoj4tNsd4s8AlmRk0KXIOMNx1esbD9K5JGsh7pMX6CCPtavFMDf9P0TbEnRT4dvKJIGJcn9r9JSpN6SjttIsNbc3rYwTxN3nSxg8GfybsNBwZUXpp88ThOHzFoayK9AYRO",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/Sc32fdfe302d64e9ea4a12169a7cfdefdi.jpg",
-      "queda": 51.9,
+      "queda": 0.0,
       "vendas": 47156,
       "desde": "14/09",
       "pontos": 1,
+      "serie": [],
       "antes": "",
       "dias": 1
     },
@@ -909,6 +1052,7 @@
       "vendas": 15212,
       "desde": "13/09",
       "pontos": 2,
+      "serie": [],
       "antes": "",
       "dias": 2
     },
@@ -923,6 +1067,7 @@
       "vendas": 3650,
       "desde": "14/09",
       "pontos": 1,
+      "serie": [],
       "antes": "",
       "dias": 1
     },
@@ -937,6 +1082,20 @@
       "vendas": 23980,
       "desde": "12/09",
       "pontos": 3,
+      "serie": [
+        [
+          "09-12",
+          15.24
+        ],
+        [
+          "09-13",
+          15.24
+        ],
+        [
+          "09-14",
+          15.59
+        ]
+      ],
       "antes": "",
       "dias": 3
     }
@@ -1185,6 +1344,60 @@
   var atual = "achadinho.make";
   var mostrandoProdutos = true;
 
+  var PISO_DO_EIXO = 0.10;
+
+  function grafico(p) {
+    var s = p.serie || [];
+    if (s.length < 3) { return null; }
+
+    var vals = s.map(function (x) { return x[1]; });
+    var menor = Math.min.apply(null, vals);
+    var maior = Math.max.apply(null, vals);
+    var faixa = Math.max(maior - menor, maior * PISO_DO_EIXO);
+    var meio = (maior + menor) / 2;
+    var topo = meio + faixa / 2;
+
+    var L = 100, A = 22, m = 2;
+    var pts = s.map(function (x, i) {
+      var px = s.length === 1 ? L / 2 : (i / (s.length - 1)) * L;
+      var py = m + (topo - x[1]) / faixa * (A - 2 * m);
+      return [px, py];
+    });
+
+    var NS = "http://www.w3.org/2000/svg";
+    var svg = document.createElementNS(NS, "svg");
+    svg.setAttribute("viewBox", "0 0 " + L + " " + A);
+    svg.setAttribute("preserveAspectRatio", "none");
+    svg.setAttribute("aria-hidden", "true");
+    svg.setAttribute("focusable", "false");
+    svg.setAttribute("class", "serie" + ((p.queda || 0) >= 5 ? " baixou" : ""));
+
+    var d = pts.map(function (q, i) {
+      return (i ? "L" : "M") + q[0].toFixed(1) + " " + q[1].toFixed(1);
+    }).join(" ");
+    var linha = document.createElementNS(NS, "path");
+    linha.setAttribute("d", d);
+    linha.setAttribute("class", "linha");
+    linha.setAttribute("vector-effect", "non-scaling-stroke");
+    svg.appendChild(linha);
+
+    var fim = document.createElementNS(NS, "circle");
+    fim.setAttribute("cx", pts[pts.length - 1][0].toFixed(1));
+    fim.setAttribute("cy", pts[pts.length - 1][1].toFixed(1));
+    fim.setAttribute("r", "2.2");
+    fim.setAttribute("class", "agora");
+    fim.setAttribute("vector-effect", "non-scaling-stroke");
+    svg.appendChild(fim);
+
+    var t = document.createElementNS(NS, "title");
+    t.textContent = s.map(function (x) {
+      return x[0].split("-").reverse().join("/") + " R$ " +
+             x[1].toFixed(2).replace(".", ",");
+    }).join(" · ");
+    svg.appendChild(t);
+    return svg;
+  }
+
   function el(tag, classe, texto) {
     var e = document.createElement(tag);
     if (classe) e.className = classe;
@@ -1402,6 +1615,8 @@
       linha_preco.appendChild(el("s", "antes", p.antes));
     }
     corpo.appendChild(linha_preco);
+    var gr = grafico(p);
+    if (gr) { corpo.appendChild(gr); }
     if (!eNovo) {
       var ac = el("div", "acompanha");
       ac.appendChild(el("span", "pulso"));
