@@ -103,7 +103,22 @@
   .interruptor:focus-visible { outline: 3px solid var(--acento); outline-offset: 2px; }
 
   
-  .topo { display: flex; flex-direction: column; align-items: center; gap: 9px; text-align: center; }
+  .topo { display: flex; flex-direction: column; align-items: center; gap: 9px; text-align: center; position: relative; }
+  
+  .balao-canal {
+    position: absolute; top: -4px; left: calc(50% + 62px); width: 58px;
+    pointer-events: none; transform-origin: 50% 100%;
+  }
+  .balao-canal img { width: 100%; height: auto; display: block;
+    filter: drop-shadow(0 6px 10px rgba(20, 16, 30, .14)); }
+  .balao-canal img:not([src]) { display: none; }
+  @media (prefers-reduced-motion: no-preference) {
+    .balao-canal { animation: flutuar 6.4s ease-in-out -2s infinite alternate; }
+  }
+  @keyframes flutuar {
+    from { transform: translate3d(0, -5px, 0) rotate(-3deg); }
+    to   { transform: translate3d(0, 5px, 0) rotate(3deg); }
+  }
   
   .heroi { text-align: center; padding: 4px 0 2px; }
   .marca {
@@ -448,6 +463,7 @@
 <div class="envelope">
 
   <header class="topo">
+    <span class="balao-canal" aria-hidden="true"><img id="balao_canal" alt="" decoding="async"></span>
     <div class="avatar" id="avatar"></div>
     <div class="heroi">
       <p class="marca" id="marca"></p>
@@ -1431,6 +1447,10 @@
         [
           "09-24 01:53",
           49.79
+        ],
+        [
+          "09-24 02:00",
+          49.79
         ]
       ],
       "antes": "",
@@ -2360,6 +2380,10 @@
         [
           "09-24 01:53",
           30.19
+        ],
+        [
+          "09-24 02:00",
+          30.19
         ]
       ],
       "antes": "",
@@ -3280,6 +3304,10 @@
         ],
         [
           "09-24 01:53",
+          54.44
+        ],
+        [
+          "09-24 02:00",
           54.44
         ]
       ],
@@ -4228,6 +4256,10 @@
         [
           "09-24 01:53",
           104.79
+        ],
+        [
+          "09-24 02:00",
+          104.79
         ]
       ],
       "antes": "",
@@ -5148,6 +5180,10 @@
         ],
         [
           "09-24 01:53",
+          101.49
+        ],
+        [
+          "09-24 02:00",
           101.49
         ]
       ],
@@ -6073,6 +6109,10 @@
         ],
         [
           "09-24 01:53",
+          110.49
+        ],
+        [
+          "09-24 02:00",
           110.49
         ]
       ],
@@ -7103,6 +7143,10 @@
         [
           "09-24 01:53",
           36.99
+        ],
+        [
+          "09-24 02:00",
+          36.99
         ]
       ],
       "antes": "",
@@ -8036,6 +8080,10 @@
         [
           "09-24 01:53",
           40.4
+        ],
+        [
+          "09-24 02:00",
+          40.4
         ]
       ],
       "antes": "",
@@ -8950,6 +8998,10 @@
         ],
         [
           "09-24 01:53",
+          93.99
+        ],
+        [
+          "09-24 02:00",
           93.99
         ]
       ],
@@ -9876,6 +9928,10 @@
         [
           "09-24 01:53",
           82.99
+        ],
+        [
+          "09-24 02:00",
+          82.99
         ]
       ],
       "antes": "R$ 114,59",
@@ -10801,6 +10857,10 @@
         [
           "09-24 01:53",
           31.39
+        ],
+        [
+          "09-24 02:00",
+          31.39
         ]
       ],
       "antes": "R$ 32,19",
@@ -11721,6 +11781,10 @@
         ],
         [
           "09-24 01:53",
+          11.2
+        ],
+        [
+          "09-24 02:00",
           11.2
         ]
       ],
@@ -12847,6 +12911,10 @@
         [
           "09-24 01:53",
           49.79
+        ],
+        [
+          "09-24 02:00",
+          49.79
         ]
       ],
       "antes": "",
@@ -13776,6 +13844,10 @@
         [
           "09-24 01:53",
           30.19
+        ],
+        [
+          "09-24 02:00",
+          30.19
         ]
       ],
       "antes": "",
@@ -14696,6 +14768,10 @@
         ],
         [
           "09-24 01:53",
+          54.44
+        ],
+        [
+          "09-24 02:00",
           54.44
         ]
       ],
@@ -15626,6 +15702,10 @@
         [
           "09-24 01:53",
           24.87
+        ],
+        [
+          "09-24 02:00",
+          24.87
         ]
       ],
       "antes": "",
@@ -16551,6 +16631,10 @@
         [
           "09-24 01:53",
           19.99
+        ],
+        [
+          "09-24 02:00",
+          19.99
         ]
       ],
       "antes": "",
@@ -17471,6 +17555,10 @@
         ],
         [
           "09-24 01:53",
+          50.49
+        ],
+        [
+          "09-24 02:00",
           50.49
         ]
       ],
@@ -18401,6 +18489,10 @@
         [
           "09-24 01:53",
           13.98
+        ],
+        [
+          "09-24 02:00",
+          13.98
         ]
       ],
       "antes": "",
@@ -19322,6 +19414,10 @@
         [
           "09-24 01:53",
           23.47
+        ],
+        [
+          "09-24 02:00",
+          23.47
         ]
       ],
       "antes": "",
@@ -20234,6 +20330,10 @@
         ],
         [
           "09-24 01:53",
+          93.99
+        ],
+        [
+          "09-24 02:00",
           93.99
         ]
       ],
@@ -21160,6 +21260,10 @@
         [
           "09-24 01:53",
           82.99
+        ],
+        [
+          "09-24 02:00",
+          82.99
         ]
       ],
       "antes": "R$ 114,59",
@@ -22085,6 +22189,10 @@
         [
           "09-24 01:53",
           31.39
+        ],
+        [
+          "09-24 02:00",
+          31.39
         ]
       ],
       "antes": "R$ 32,19",
@@ -23006,6 +23114,10 @@
         [
           "09-24 01:53",
           11.2
+        ],
+        [
+          "09-24 02:00",
+          11.2
         ]
       ],
       "antes": "R$ 12,92",
@@ -23565,6 +23677,14 @@
     return e;
   }
 
+  var BALOES_CANAL = {
+    "achadinho.make": "canal_achadinho_make",
+    "modofuturo": "canal_modo_futuro",
+    "semanestesia.pod": "canal_sem_anestesia",
+    "fatura.chora": "canal_pago_menos",
+    "achadinhos.instantaneos": "canal_achadinhos_instantaneos",
+    "cozinha.internacional": "canal_achadinho_chef"
+  };
   function desenhar(chave) {
     var c = CANAIS[chave];
     raiz.style.setProperty("--acento", c.acento);
@@ -23582,6 +23702,8 @@
       av.textContent = c.inicial;
       av.classList.remove("com-brasao");
     }
+    var bc = document.getElementById("balao_canal");
+    if (bc) { bc.src = "/baloes/" + (BALOES_CANAL[chave] || "inaug_lupa") + ".webp"; }
     document.getElementById("marca").textContent = c.nome;
     document.getElementById("chamada").innerHTML =
       "Eu garimpo.<br>Você <em>paga menos</em>.";
