@@ -408,15 +408,31 @@
   }
   
   
-  .serie { display: block; width: 100%; height: 22px; margin-top: 2px; }
-  .serie .linha {
-    fill: none; stroke: var(--tinta-fraca); stroke-width: 1.4;
-    stroke-linejoin: round; stroke-linecap: round; opacity: .7;
-  }
-  .serie .agora { fill: var(--tinta-fraca); }
   
-  .serie.baixou .linha { stroke: var(--acento); opacity: 1; }
-  .serie.baixou .agora { fill: var(--acento); }
+  .produto { --fraco: var(--tinta-fraca); --verde: #16a34a; }
+  .serie-wrap { position: relative; margin-top: 8px; padding-right: 4px; }
+  .serie-wrap .escala {
+    display: flex; justify-content: flex-start; flex-wrap: nowrap; gap: 6px;
+    margin-top: 6px; align-items: center;
+    font: 400 0.6875rem/1.3 Poppins, sans-serif; color: var(--fraco);
+    font-variant-numeric: tabular-nums;
+  }
+  .serie-wrap .escala svg { width: 13px; height: 13px; flex: 0 0 auto; opacity: .9; }
+  .serie-wrap .escala .nq { white-space: normal; text-wrap: balance; }
+  .serie-wrap .escala .nq.ok { color: var(--verde); font-weight: 600; }
+  .serie-wrap .agora {
+    position: absolute; width: 5px; height: 5px; border-radius: 50%;
+    background: var(--fraco); transform: translate(-50%, -50%); margin-left: -2px;
+  }
+  .serie-wrap.baixou .agora { background: var(--verde); }
+  .serie { display: block; width: 100%; height: 34px; }
+  .serie .area { fill: var(--fraco); opacity: .10; stroke: none; }
+  .serie.baixou .area { fill: var(--verde); opacity: .13; }
+  .serie .linha {
+    fill: none; stroke: var(--fraco); stroke-width: 2;
+    stroke-linejoin: round; stroke-linecap: round; opacity: .75;
+  }
+  .serie.baixou .linha { stroke: var(--verde); opacity: 1; }
   .foto { position: relative; }
   
   .areas {
@@ -2284,6 +2300,14 @@
         [
           "09-27 15:42",
           39.99
+        ],
+        [
+          "09-27 15:52",
+          39.99
+        ],
+        [
+          "09-27 16:07",
+          39.99
         ]
       ],
       "antes": "R$ 41,19",
@@ -3893,6 +3917,14 @@
         [
           "09-27 15:42",
           255.99
+        ],
+        [
+          "09-27 15:52",
+          255.99
+        ],
+        [
+          "09-27 16:07",
+          255.99
         ]
       ],
       "antes": "",
@@ -5497,6 +5529,14 @@
         ],
         [
           "09-27 15:42",
+          153.92
+        ],
+        [
+          "09-27 15:52",
+          153.92
+        ],
+        [
+          "09-27 16:07",
           153.92
         ]
       ],
@@ -7104,6 +7144,14 @@
         ],
         [
           "09-27 15:42",
+          50.29
+        ],
+        [
+          "09-27 15:52",
+          50.29
+        ],
+        [
+          "09-27 16:07",
           50.29
         ]
       ],
@@ -8714,6 +8762,14 @@
         [
           "09-27 15:42",
           35.99
+        ],
+        [
+          "09-27 15:52",
+          35.99
+        ],
+        [
+          "09-27 16:07",
+          35.99
         ]
       ],
       "antes": "",
@@ -10318,6 +10374,14 @@
         ],
         [
           "09-27 15:42",
+          20.21
+        ],
+        [
+          "09-27 15:52",
+          20.21
+        ],
+        [
+          "09-27 16:07",
           20.21
         ]
       ],
@@ -11928,6 +11992,14 @@
         [
           "09-27 15:42",
           14.12
+        ],
+        [
+          "09-27 15:52",
+          14.12
+        ],
+        [
+          "09-27 16:07",
+          14.12
         ]
       ],
       "antes": "",
@@ -13530,6 +13602,14 @@
         ],
         [
           "09-27 15:42",
+          40.69
+        ],
+        [
+          "09-27 15:52",
+          40.69
+        ],
+        [
+          "09-27 16:07",
           40.69
         ]
       ],
@@ -15140,6 +15220,14 @@
         [
           "09-27 15:42",
           12.29
+        ],
+        [
+          "09-27 15:52",
+          12.29
+        ],
+        [
+          "09-27 16:07",
+          12.29
         ]
       ],
       "antes": "",
@@ -16740,6 +16828,14 @@
         ],
         [
           "09-27 15:42",
+          29.81
+        ],
+        [
+          "09-27 15:52",
+          29.81
+        ],
+        [
+          "09-27 16:07",
           29.81
         ]
       ],
@@ -18342,6 +18438,14 @@
         [
           "09-27 15:42",
           47.79
+        ],
+        [
+          "09-27 15:52",
+          47.79
+        ],
+        [
+          "09-27 16:07",
+          47.79
         ]
       ],
       "antes": "",
@@ -19936,6 +20040,14 @@
         ],
         [
           "09-27 15:42",
+          111.39
+        ],
+        [
+          "09-27 15:52",
+          111.39
+        ],
+        [
+          "09-27 16:07",
           111.39
         ]
       ],
@@ -21542,6 +21654,14 @@
         [
           "09-27 15:42",
           143.59
+        ],
+        [
+          "09-27 15:52",
+          143.59
+        ],
+        [
+          "09-27 16:07",
+          143.59
         ]
       ],
       "antes": "",
@@ -23142,6 +23262,14 @@
         ],
         [
           "09-27 15:42",
+          11.32
+        ],
+        [
+          "09-27 15:52",
+          11.32
+        ],
+        [
+          "09-27 16:07",
           11.32
         ]
       ],
@@ -24747,6 +24875,14 @@
         ],
         [
           "09-27 15:42",
+          25.39
+        ],
+        [
+          "09-27 15:52",
+          25.39
+        ],
+        [
+          "09-27 16:07",
           25.39
         ]
       ],
@@ -26359,6 +26495,14 @@
         [
           "09-27 15:42",
           106.09
+        ],
+        [
+          "09-27 15:52",
+          106.09
+        ],
+        [
+          "09-27 16:07",
+          106.09
         ]
       ],
       "antes": "",
@@ -27960,6 +28104,14 @@
         [
           "09-27 15:42",
           102.49
+        ],
+        [
+          "09-27 15:52",
+          102.49
+        ],
+        [
+          "09-27 16:07",
+          102.49
         ]
       ],
       "antes": "",
@@ -29560,6 +29712,14 @@
         ],
         [
           "09-27 15:42",
+          73.39
+        ],
+        [
+          "09-27 15:52",
+          73.39
+        ],
+        [
+          "09-27 16:07",
           73.39
         ]
       ],
@@ -31443,6 +31603,14 @@
         [
           "09-27 15:42",
           39.99
+        ],
+        [
+          "09-27 15:52",
+          39.99
+        ],
+        [
+          "09-27 16:07",
+          39.99
         ]
       ],
       "antes": "R$ 41,19",
@@ -33047,6 +33215,14 @@
         ],
         [
           "09-27 15:42",
+          50.29
+        ],
+        [
+          "09-27 15:52",
+          50.29
+        ],
+        [
+          "09-27 16:07",
           50.29
         ]
       ],
@@ -34657,6 +34833,14 @@
         [
           "09-27 15:42",
           35.99
+        ],
+        [
+          "09-27 15:52",
+          35.99
+        ],
+        [
+          "09-27 16:07",
+          35.99
         ]
       ],
       "antes": "",
@@ -36257,6 +36441,14 @@
         ],
         [
           "09-27 15:42",
+          40.69
+        ],
+        [
+          "09-27 15:52",
+          40.69
+        ],
+        [
+          "09-27 16:07",
           40.69
         ]
       ],
@@ -37863,6 +38055,14 @@
         [
           "09-27 15:42",
           13.79
+        ],
+        [
+          "09-27 15:52",
+          13.79
+        ],
+        [
+          "09-27 16:07",
+          13.79
         ]
       ],
       "antes": "R$ 16,26",
@@ -39455,6 +39655,14 @@
         ],
         [
           "09-27 15:42",
+          111.39
+        ],
+        [
+          "09-27 15:52",
+          111.39
+        ],
+        [
+          "09-27 16:07",
           111.39
         ]
       ],
@@ -41060,6 +41268,14 @@
         ],
         [
           "09-27 15:42",
+          143.59
+        ],
+        [
+          "09-27 15:52",
+          143.59
+        ],
+        [
+          "09-27 16:07",
           143.59
         ]
       ],
@@ -42670,6 +42886,14 @@
         [
           "09-27 15:42",
           106.09
+        ],
+        [
+          "09-27 15:52",
+          106.09
+        ],
+        [
+          "09-27 16:07",
+          106.09
         ]
       ],
       "antes": "",
@@ -44270,6 +44494,14 @@
         ],
         [
           "09-27 15:42",
+          102.49
+        ],
+        [
+          "09-27 15:52",
+          102.49
+        ],
+        [
+          "09-27 16:07",
           102.49
         ]
       ],
@@ -45884,6 +46116,14 @@
         [
           "09-27 15:42",
           14.59
+        ],
+        [
+          "09-27 15:52",
+          14.59
+        ],
+        [
+          "09-27 16:07",
+          14.59
         ]
       ],
       "antes": "R$ 18,44",
@@ -47489,6 +47729,14 @@
         [
           "09-27 15:42",
           19.21
+        ],
+        [
+          "09-27 15:52",
+          19.21
+        ],
+        [
+          "09-27 16:07",
+          19.21
         ]
       ],
       "antes": "R$ 22,59",
@@ -47872,6 +48120,152 @@
         "vitrine_nota": 32.0,
         "vitrine_fora": ""
       }
+    ],
+    "semanestesia.pod": [
+      {
+        "nome": "Nada pode me ferir — David Goggins",
+        "link": "https://produto.mercadolivre.com.br/MLB-3872638317?matt_word=bryanexpand&matt_tool=87181766",
+        "imagem": "https://http2.mlstatic.com/D_NQ_NP_898427-MLA112165846930_062026-O.jpg",
+        "preco": "R$ 45,43",
+        "preco_num": 45.43,
+        "vendedores": 100,
+        "frete_gratis": false,
+        "dominio": "MLB-BOOKS",
+        "categoria_ml": "MLB437616",
+        "loja": "Mercado Livre",
+        "_id": "MLB41345364",
+        "_tipo": "PRODUCT",
+        "comissao_base": 8.0,
+        "comissao": 8.0
+      },
+      {
+        "nome": "Nunca é hora de parar — David Goggins",
+        "link": "https://produto.mercadolivre.com.br/MLB-5097773822?matt_word=bryanexpand&matt_tool=87181766",
+        "imagem": "https://http2.mlstatic.com/D_NQ_NP_883783-MLA113308124685_062026-O.jpg",
+        "preco": "R$ 47,33",
+        "preco_num": 47.33,
+        "vendedores": 100,
+        "frete_gratis": false,
+        "dominio": "MLB-BOOKS",
+        "categoria_ml": "MLB437616",
+        "loja": "Mercado Livre",
+        "_id": "MLB41345298",
+        "_tipo": "PRODUCT",
+        "comissao_base": 8.0,
+        "comissao": 8.0
+      },
+      {
+        "nome": "Hábitos Atômicos — James Clear",
+        "link": "https://produto.mercadolivre.com.br/MLB-3653831467?matt_word=bryanexpand&matt_tool=87181766",
+        "imagem": "https://http2.mlstatic.com/D_NQ_NP_755934-MLU77234694908_072024-O.jpg",
+        "preco": "R$ 25,00",
+        "preco_num": 25.0,
+        "vendedores": 9,
+        "frete_gratis": false,
+        "dominio": "MLB-BOOKS",
+        "categoria_ml": "MLB437616",
+        "loja": "Mercado Livre",
+        "_id": "MLB22026513",
+        "_tipo": "PRODUCT",
+        "comissao_base": 8.0,
+        "comissao": 8.0
+      },
+      {
+        "nome": "Nação Dopamina — Anna Lembke",
+        "link": "https://produto.mercadolivre.com.br/MLB-3442676703?matt_word=bryanexpand&matt_tool=87181766",
+        "imagem": "https://http2.mlstatic.com/D_NQ_NP_756210-MLB49599793609_042022-O.jpg",
+        "preco": "R$ 79,80",
+        "preco_num": 79.8,
+        "vendedores": 6,
+        "frete_gratis": false,
+        "dominio": "MLB-BOOKS",
+        "categoria_ml": "MLB437616",
+        "loja": "Mercado Livre",
+        "_id": "MLB22160888",
+        "_tipo": "PRODUCT",
+        "comissao_base": 8.0,
+        "comissao": 8.0
+      },
+      {
+        "nome": "Por que nós dormimos — Matthew Walker",
+        "link": "https://produto.mercadolivre.com.br/MLB-7668782476?matt_word=bryanexpand&matt_tool=87181766",
+        "imagem": "https://http2.mlstatic.com/D_NQ_NP_741311-MLA109214743236_042026-O.jpg",
+        "preco": "R$ 49,00",
+        "preco_num": 49.0,
+        "vendedores": 100,
+        "frete_gratis": false,
+        "dominio": "MLB-BOOKS",
+        "categoria_ml": "MLB437616",
+        "loja": "Mercado Livre",
+        "_id": "MLB22441378",
+        "_tipo": "PRODUCT",
+        "comissao_base": 8.0,
+        "comissao": 8.0
+      },
+      {
+        "nome": "Mindset — Carol S. Dweck",
+        "link": "https://produto.mercadolivre.com.br/MLB-7608382860?matt_word=bryanexpand&matt_tool=87181766",
+        "imagem": "https://http2.mlstatic.com/D_NQ_NP_796076-MLA112164434634_062026-O.jpg",
+        "preco": "R$ 38,50",
+        "preco_num": 38.5,
+        "vendedores": 100,
+        "frete_gratis": true,
+        "dominio": "MLB-BOOKS",
+        "categoria_ml": "MLB437616",
+        "loja": "Mercado Livre",
+        "_id": "MLB19400652",
+        "_tipo": "PRODUCT",
+        "comissao_base": 8.0,
+        "comissao": 8.0
+      },
+      {
+        "nome": "O poder do hábito — Charles Duhigg",
+        "link": "https://produto.mercadolivre.com.br/MLB-7149795352?matt_word=bryanexpand&matt_tool=87181766",
+        "imagem": "https://http2.mlstatic.com/D_NQ_NP_938657-MLA113420423213_062026-O.jpg",
+        "preco": "R$ 44,90",
+        "preco_num": 44.9,
+        "vendedores": 100,
+        "frete_gratis": false,
+        "dominio": "MLB-BOOKS",
+        "categoria_ml": "MLB437616",
+        "loja": "Mercado Livre",
+        "_id": "MLB19458761",
+        "_tipo": "PRODUCT",
+        "comissao_base": 8.0,
+        "comissao": 8.0
+      },
+      {
+        "nome": "Trabalho focado — Cal Newport",
+        "link": "https://produto.mercadolivre.com.br/MLB-5088514548?matt_word=bryanexpand&matt_tool=87181766",
+        "imagem": "https://http2.mlstatic.com/D_NQ_NP_759315-MLU50420667130_062022-O.jpg",
+        "preco": "R$ 63,11",
+        "preco_num": 63.11,
+        "vendedores": 100,
+        "frete_gratis": false,
+        "dominio": "MLB-BOOKS",
+        "categoria_ml": "MLB437616",
+        "loja": "Mercado Livre",
+        "_id": "MLB19202689",
+        "_tipo": "PRODUCT",
+        "comissao_base": 8.0,
+        "comissao": 8.0
+      },
+      {
+        "nome": "Rápido e devagar — Daniel Kahneman",
+        "link": "https://produto.mercadolivre.com.br/MLB-3902938695?matt_word=bryanexpand&matt_tool=87181766",
+        "imagem": "https://http2.mlstatic.com/D_NQ_NP_813604-MLA113420252693_062026-O.jpg",
+        "preco": "R$ 62,90",
+        "preco_num": 62.9,
+        "vendedores": 100,
+        "frete_gratis": false,
+        "dominio": "MLB-BOOKS",
+        "categoria_ml": "MLB437616",
+        "loja": "Mercado Livre",
+        "_id": "MLB19203760",
+        "_tipo": "PRODUCT",
+        "comissao_base": 8.0,
+        "comissao": 8.0
+      }
     ]
   },
   "_do_video": {}
@@ -48114,24 +48508,66 @@
   var atual = "achadinho.make";
   var mostrandoProdutos = true;
 
-  var PISO_DO_EIXO = 0.10;
+  function vistoSVG() {
+    var s = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    s.setAttribute("viewBox", "0 0 16 16");
+    s.setAttribute("aria-hidden", "true");
+    s.innerHTML = '<circle cx="8" cy="8" r="5.6" fill="none" stroke="currentColor" stroke-width="1.4"/>'
+      + '<path d="M5.4 8.2l1.9 1.9 3.4-3.9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>';
+    return s;
+  }
+  var PISO_DO_EIXO = 0.02;
 
-  function grafico(p) {
+  function momentoDoRotulo(r) {
+    var mm = /^(\d\d)-(\d\d)(?: (\d\d):(\d\d))?$/.exec(r || "");
+    if (!mm) { return NaN; }
+    return Date.UTC(2000, +mm[1] - 1, +mm[2], mm[3] ? +mm[3] : 12, mm[4] ? +mm[4] : 0);
+  }
+  function rotuloBonito(r) {
+    var mm = /^(\d\d)-(\d\d)(.*)$/.exec(r || "");
+    return mm ? mm[2] + "/" + mm[1] + mm[3] : r;
+  }
+
+  function grafico(p, empilhado) {
     var s = p.serie || [];
     if (s.length < 3) { return null; }
+
+    var menorVisto = Math.min.apply(null, s.map(function (x) { return x[1]; }));
+    var maiorVisto = Math.max.apply(null, s.map(function (x) { return x[1]; }));
+    var estavel = maiorVisto - menorVisto < 0.01;
+    var refAntes = emReais(p.antes), refHoje = emReais(p.preco);
+    if (refAntes && refHoje && refAntes > refHoje) {
+      var iPico = 0;
+      for (var kp = 1; kp < s.length; kp++) {
+        if (s[kp][1] > s[iPico][1]) { iPico = kp; }
+      }
+      if (s.length - iPico >= 3) { s = s.slice(iPico); }
+    }
 
     var vals = s.map(function (x) { return x[1]; });
     var menor = Math.min.apply(null, vals);
     var maior = Math.max.apply(null, vals);
-    var faixa = Math.max(maior - menor, maior * PISO_DO_EIXO);
-    var meio = (maior + menor) / 2;
-    var topo = meio + faixa / 2;
+
+    var ganho = null;
+    if (p.ganhoRef > 0) {
+      ganho = vals.map(function (v) { return Math.max(p.ganhoRef - v, 0); });
+      var gMax = Math.max.apply(null, ganho);
+      if (gMax <= 0.005) { ganho = null; }
+    }
+
+    var desenho = vals;
+    var faixa, topo;
+    if (ganho) {
+      desenho = ganho;
+      faixa = topo = Math.max.apply(null, ganho) * 1.12;
+    } else {
+      faixa = Math.max(maior - menor, maior * PISO_DO_EIXO);
+      var meio = (maior + menor) / 2;
+      topo = meio + faixa / 2;
+    }
 
     var L = 100, A = 22, m = 2;
-    var tempos = s.map(function (x) {
-      var mm = /^(\d\d)-(\d\d)(?: (\d\d):(\d\d))?$/.exec(x[0] || "");
-      return mm ? Date.UTC(2000, +mm[1] - 1, +mm[2], mm[3] ? +mm[3] : 12, mm[4] ? +mm[4] : 0) : NaN;
-    });
+    var tempos = s.map(function (x) { return momentoDoRotulo(x[0]); });
     var t0 = tempos[0], tN = tempos[tempos.length - 1];
     var porTempo = tN > t0 && tempos.every(function (tt, i) {
       return !isNaN(tt) && (i === 0 || tt >= tempos[i - 1]);
@@ -48140,7 +48576,7 @@
       var px = s.length === 1 ? L / 2
              : porTempo ? (tempos[i] - t0) / (tN - t0) * L
              : (i / (s.length - 1)) * L;
-      var py = m + (topo - x[1]) / faixa * (A - 2 * m);
+      var py = m + (topo - desenho[i]) / faixa * (A - 2 * m);
       return [px, py];
     });
 
@@ -48150,34 +48586,95 @@
     svg.setAttribute("preserveAspectRatio", "none");
     svg.setAttribute("aria-hidden", "true");
     svg.setAttribute("focusable", "false");
-    svg.setAttribute("class", "serie" + ((p.queda || 0) >= 5 ? " baixou" : ""));
+    var desceu = vals[vals.length - 1] < vals[0] - 0.005;
+    svg.setAttribute("class", "serie" + (desceu ? " baixou" : ""));
 
-    var d = pts.map(function (q, i) {
-      return (i ? "L" : "M") + q[0].toFixed(1) + " " + q[1].toFixed(1);
-    }).join(" ");
+    var d;
+    if (p.suave) {
+      d = "M" + pts[0][0].toFixed(1) + " " + pts[0][1].toFixed(1);
+      for (var k = 0; k < pts.length - 1; k++) {
+        var p0 = pts[Math.max(k - 1, 0)], p1 = pts[k],
+            p2 = pts[k + 1], p3 = pts[Math.min(k + 2, pts.length - 1)];
+        var c1x = p1[0] + (p2[0] - p0[0]) / 6, c1y = p1[1] + (p2[1] - p0[1]) / 6;
+        var c2x = p2[0] - (p3[0] - p1[0]) / 6, c2y = p2[1] - (p3[1] - p1[1]) / 6;
+        d += " C" + c1x.toFixed(1) + " " + c1y.toFixed(1) + " " + c2x.toFixed(1) +
+             " " + c2y.toFixed(1) + " " + p2[0].toFixed(1) + " " + p2[1].toFixed(1);
+      }
+    } else {
+      d = pts.map(function (q, i) {
+        return (i ? "L" : "M") + q[0].toFixed(1) + " " + q[1].toFixed(1);
+      }).join(" ");
+    }
+    var area = document.createElementNS(NS, "path");
+    area.setAttribute("d", d + " L" + pts[pts.length - 1][0].toFixed(1) + " " + A +
+                           " L" + pts[0][0].toFixed(1) + " " + A + " Z");
+    area.setAttribute("class", "area");
+    svg.appendChild(area);
     var linha = document.createElementNS(NS, "path");
     linha.setAttribute("d", d);
     linha.setAttribute("class", "linha");
     linha.setAttribute("vector-effect", "non-scaling-stroke");
     svg.appendChild(linha);
 
-    var fim = document.createElementNS(NS, "circle");
-    fim.setAttribute("cx", pts[pts.length - 1][0].toFixed(1));
-    fim.setAttribute("cy", pts[pts.length - 1][1].toFixed(1));
-    fim.setAttribute("r", "2.2");
-    fim.setAttribute("class", "agora");
-    fim.setAttribute("vector-effect", "non-scaling-stroke");
-    svg.appendChild(fim);
+    var ult = pts[pts.length - 1];
+    var ponto = document.createElement("span");
+    ponto.className = "agora";
+    ponto.style.left = (ult[0] / L * 100).toFixed(1) + "%";
+    ponto.style.top = (ult[1] / A * 100).toFixed(1) + "%";
 
     var t = document.createElementNS(NS, "title");
-    t.textContent = s.map(function (x) {
-      return x[0].replace(/^(\d\d)-(\d\d)/, "$2/$1") + " R$ " +
-             x[1].toFixed(2).replace(".", ",");
+    t.textContent = s.map(function (x, i) {
+      return rotuloBonito(x[0]) + " " +
+             (ganho ? "economia R$ " : "R$ ") +
+             desenho[i].toFixed(2).replace(".", ",");
     }).join(" · ");
     svg.appendChild(t);
-    return svg;
+    var wrap = document.createElement("div");
+    wrap.className = "serie-wrap" + (desceu ? " baixou" : "")
+                   + (ganho ? " ganho" : "");
+    wrap.appendChild(svg);
+    wrap.appendChild(ponto);
+    if (!p.suave) {
+      ponto.remove();
+      var esc = el("div", "escala");
+      var pAgora = vals[vals.length - 1];
+      var noMenor = pAgora <= menorVisto + 0.005;
+      var folga = pAgora - menorVisto;
+      var perto = !noMenor && menorVisto > 0 && folga / menorVisto <= 0.03;
+      var veredito = estavel ? ""
+                   : noMenor ? " · menor que eu vi ✓"
+                   : perto ? " · " + moeda(folga) + " do menor preço"
+                   : "";
+      var idade = (p.dias || 0) <= 0 ? "novo · acompanhando desde hoje"
+                : estavel ? (p.dias === 1 ? "preço estável há 1 dia"
+                                          : "preço estável há " + p.dias + " dias")
+                : p.dias === 1 ? "rastreando há 1 dia"
+                : "rastreando há " + p.dias + " dias";
+      var classe = "nq" + (noMenor && desceu && !estavel ? " ok" : "");
+      var linha1 = empilhado ? el("span", "nq tem-icone") : el("span", classe);
+      if (empilhado) { linha1.appendChild(vistoSVG()); }
+      if (empilhado && veredito) {
+        esc.classList.add("empilhada");
+        linha1.appendChild(document.createTextNode(idade));
+        esc.appendChild(linha1);
+        var linha2 = el("span", classe + " tem-icone");
+        linha2.appendChild(vistoSVG());
+        linha2.appendChild(document.createTextNode(veredito.replace(/^\u00a0·\s*/, "")));
+        esc.appendChild(linha2);
+      } else {
+        linha1.appendChild(document.createTextNode(idade + veredito));
+        esc.appendChild(linha1);
+      }
+      wrap.appendChild(esc);
+    }
+    return wrap;
   }
-
+  function emReais(s) {
+    var t = String(s || "").replace(/[^0-9,.]/g, "").replace(/\./g, "").replace(",", ".");
+    var v = parseFloat(t);
+    return isFinite(v) ? v : null;
+  }
+  function moeda(v) { return "R$ " + v.toFixed(2).replace(".", ","); }
   function el(tag, classe, texto) {
     var e = document.createElement(tag);
     if (classe) e.className = classe;
@@ -48400,8 +48897,21 @@
     }
     corpo.appendChild(linha_preco);
     var gr = grafico(p);
-    if (gr) { corpo.appendChild(gr); }
-    if (!eNovo) {
+    if (gr) {
+      var escL = gr.querySelector(".escala");
+      if (escL) {
+        escL.classList.add("meta-linha");
+        var lupa = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        lupa.setAttribute("viewBox", "0 0 16 16");
+        lupa.setAttribute("aria-hidden", "true");
+        lupa.innerHTML = '<circle cx="7" cy="7" r="4.6" fill="none" stroke="currentColor" stroke-width="1.5"/>'
+          + '<path d="M10.4 10.4L14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>';
+        escL.insertBefore(lupa, escL.firstChild);
+      }
+      corpo.appendChild(gr);
+    }
+    if (gr) {
+    } else if (!eNovo) {
       var ac = el("div", "acompanha");
       ac.appendChild(el("span", "pulso"));
       var quanto = p.dias <= 0
