@@ -420,18 +420,33 @@
   .foto { position: relative; }
   
   .areas {
-    display: flex; gap: 8px; overflow-x: auto; margin: 0 0 14px;
-    padding-bottom: 4px; scrollbar-width: none;
+    position: sticky; top: 0; z-index: 5;
+    display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none;
+    margin: 0 -16px 6px; padding: 10px 16px;
+    background: color-mix(in srgb, var(--fundo, #f6f6f8) 88%, transparent);
+    -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
   }
   .areas::-webkit-scrollbar { display: none; }
   .area {
-    flex: none; font: 600 13px/1 inherit; font-family: inherit;
-    padding: 9px 14px; border-radius: 999px; cursor: pointer;
+    flex: none; font-family: inherit; font-weight: 600; font-size: 13px;
+    line-height: 1; padding: 9px 15px; border-radius: 999px; cursor: pointer;
     border: 1.5px solid var(--tinta); background: var(--superficie);
     color: var(--tinta);
   }
-  .area.ligada { background: var(--tinta); color: var(--superficie); }
-  .produto[hidden] { display: none; }
+  .area:active { background: var(--tinta); color: var(--superficie); }
+  .setor { scroll-margin-top: 64px; margin-top: 26px; }
+  .setor .cabeca { display: block; margin-bottom: 12px; }
+  .setor .apoio {
+    margin: 4px 0 0; font-size: 13.5px; color: var(--tinta-fraca);
+  }
+  .vitrine.trilho-setor {
+    display: grid; grid-auto-flow: column; grid-template-columns: none;
+    grid-auto-columns: 46%; gap: 12px; overflow-x: auto;
+    scroll-snap-type: x mandatory; scrollbar-width: none;
+    margin: 0 -16px; padding: 2px 16px 10px; scroll-padding: 0 16px;
+  }
+  .vitrine.trilho-setor::-webkit-scrollbar { display: none; }
+  .vitrine.trilho-setor .produto { scroll-snap-align: start; }
   
   .produto.livro .foto {
     aspect-ratio: 4 / 5; padding: 16px 0 14px;
@@ -596,7 +611,7 @@
     {
       "nome": "Cabo USB Tipo C para iPhone 18 17",
       "nome_loja": "Cabo USB Tipo C para iPhone 18 17, 100W/5A, carregador de carregamento rápido PD, cabo par",
-      "preco": "R$ 14,23",
+      "preco": "R$ 24,89",
       "visto": "27/09",
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4m5gFeDtIGqOWjZjmA0ZuukDlE3zbUpTylHS0xejLYva90ZumtwyGRU8lKwCUVPrJl8sbTaF3MN7dJszct5wGAh5itsSkCITxHTXlg1RzjeJBgSWDOIg6JlOwf14JOguGKGUKq1wkYh4L1Vo5to50n497yQuwAKS5qVf42MgN7ITFB8RsrEIoiSTLRQvEwiMFRVOO0wynRqXaHrUHu9MD5KFHLIGRMKtwVc5PiP01SS4JPZ9AJ7zLHkllFjXqC7lNQ5r1zhr85ArmI4BLAy4E2lqXwsC2ZW4r2wvG6NZyyGt2z1BFQdS4VdHz6OxqCq4TwU6vAybddnwHqCVaI8FUtjZJ6veWjItn7W84wW3mFEwOmYjK263jSecVxa9WGLvc7S70duS1bpNVpnuLrMxNiTIst34zWsgCFOKmaglpLVyykM1D8geIvXpKo6udqkwqt5bcw2Cg0BWl26mDGcOuUbDNF6xtv1OHiBGTX30tpHtd2CE7alSpA6U0ghe2bcueoNVM7a4IczfbF4RsthTfiNtouJGiVNTI72lBzleypf89kLs6hn9VL7hjG4zxTHy36MhJfgLrSagv02RG0MjGqYzoxBSf1ooPuxLAUovELn9uyQrQDDFwgPVrNo6UD8F0RA8yh2pbXUbsoiPpENSZSjJ4APuDgiENy7mNu8RlUjWqc0AldqeslDLm40p9TP7kIznAEznC21F7w",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/S9695043747b941189d5a7eb04a650549S.jpg",
@@ -652,6 +667,10 @@
         [
           "09-26",
           14.23
+        ],
+        [
+          "09-27",
+          24.89
         ]
       ],
       "antes": "",
@@ -2249,6 +2268,14 @@
         [
           "09-27 15:16",
           39.99
+        ],
+        [
+          "09-27 15:24",
+          39.99
+        ],
+        [
+          "09-27 15:29",
+          39.99
         ]
       ],
       "antes": "R$ 41,19",
@@ -3842,6 +3869,14 @@
         [
           "09-27 15:16",
           255.99
+        ],
+        [
+          "09-27 15:24",
+          255.99
+        ],
+        [
+          "09-27 15:29",
+          255.99
         ]
       ],
       "antes": "",
@@ -5430,6 +5465,14 @@
         ],
         [
           "09-27 15:16",
+          153.92
+        ],
+        [
+          "09-27 15:24",
+          153.92
+        ],
+        [
+          "09-27 15:29",
           153.92
         ]
       ],
@@ -7021,6 +7064,14 @@
         ],
         [
           "09-27 15:16",
+          50.29
+        ],
+        [
+          "09-27 15:24",
+          50.29
+        ],
+        [
+          "09-27 15:29",
           50.29
         ]
       ],
@@ -8615,6 +8666,14 @@
         [
           "09-27 15:16",
           35.99
+        ],
+        [
+          "09-27 15:24",
+          35.99
+        ],
+        [
+          "09-27 15:29",
+          35.99
         ]
       ],
       "antes": "",
@@ -10203,6 +10262,14 @@
         ],
         [
           "09-27 15:16",
+          20.21
+        ],
+        [
+          "09-27 15:24",
+          20.21
+        ],
+        [
+          "09-27 15:29",
           20.21
         ]
       ],
@@ -11797,6 +11864,14 @@
         [
           "09-27 15:16",
           14.12
+        ],
+        [
+          "09-27 15:24",
+          14.12
+        ],
+        [
+          "09-27 15:29",
+          14.12
         ]
       ],
       "antes": "",
@@ -13383,6 +13458,14 @@
         ],
         [
           "09-27 15:16",
+          40.69
+        ],
+        [
+          "09-27 15:24",
+          40.69
+        ],
+        [
+          "09-27 15:29",
           40.69
         ]
       ],
@@ -14977,6 +15060,14 @@
         [
           "09-27 15:16",
           12.29
+        ],
+        [
+          "09-27 15:24",
+          12.29
+        ],
+        [
+          "09-27 15:29",
+          12.29
         ]
       ],
       "antes": "",
@@ -16561,6 +16652,14 @@
         ],
         [
           "09-27 15:16",
+          29.81
+        ],
+        [
+          "09-27 15:24",
+          29.81
+        ],
+        [
+          "09-27 15:29",
           29.81
         ]
       ],
@@ -18147,6 +18246,14 @@
         [
           "09-27 15:16",
           47.79
+        ],
+        [
+          "09-27 15:24",
+          47.79
+        ],
+        [
+          "09-27 15:29",
+          47.79
         ]
       ],
       "antes": "",
@@ -19725,6 +19832,14 @@
         ],
         [
           "09-27 15:16",
+          111.39
+        ],
+        [
+          "09-27 15:24",
+          111.39
+        ],
+        [
+          "09-27 15:29",
           111.39
         ]
       ],
@@ -21315,6 +21430,14 @@
         [
           "09-27 15:16",
           143.59
+        ],
+        [
+          "09-27 15:24",
+          143.59
+        ],
+        [
+          "09-27 15:29",
+          143.59
         ]
       ],
       "antes": "",
@@ -22899,6 +23022,14 @@
         ],
         [
           "09-27 15:16",
+          11.32
+        ],
+        [
+          "09-27 15:24",
+          11.32
+        ],
+        [
+          "09-27 15:29",
           11.32
         ]
       ],
@@ -24488,6 +24619,14 @@
         ],
         [
           "09-27 15:16",
+          25.39
+        ],
+        [
+          "09-27 15:24",
+          25.39
+        ],
+        [
+          "09-27 15:29",
           25.39
         ]
       ],
@@ -26084,6 +26223,14 @@
         [
           "09-27 15:16",
           106.09
+        ],
+        [
+          "09-27 15:24",
+          106.09
+        ],
+        [
+          "09-27 15:29",
+          106.09
         ]
       ],
       "antes": "",
@@ -27668,6 +27815,14 @@
         ],
         [
           "09-27 15:16",
+          102.49
+        ],
+        [
+          "09-27 15:24",
+          102.49
+        ],
+        [
+          "09-27 15:29",
           102.49
         ]
       ],
@@ -29254,6 +29409,14 @@
         [
           "09-27 15:16",
           73.39
+        ],
+        [
+          "09-27 15:24",
+          73.39
+        ],
+        [
+          "09-27 15:29",
+          73.39
         ]
       ],
       "antes": "",
@@ -29463,7 +29626,7 @@
     {
       "nome": "Cabo USB Tipo C para iPhone 18 17",
       "nome_loja": "Cabo USB Tipo C para iPhone 18 17, 100W/5A, carregador de carregamento rápido PD, cabo par",
-      "preco": "R$ 14,23",
+      "preco": "R$ 24,89",
       "visto": "27/09",
       "link": "https://s.click.aliexpress.com/s/pyFri10M6ltAv61YZY9TfrxiDaaFXRreuZWJMeLtD8jig1wPxn51K2eq59ds8iT5Wl5L3w5KJyrl7SjOO3B0oJ0Xjwnc7n8AQA7gf5qnT4sCyU05LNms9JvyWQNFHNKtzBcoBpSguMg3UBR1FOODkmGTloXosMhqhnKgzzuJPYPxewVvzupiAiKSJA5SK0iQRxmaQ7UPG0AP2HC7uLitVpvXIfjMl7RnsnN7B8FrGfP9TWP7emQeaXV90Bp9fLEiLeKHsRf9R2jgKD32Axm5na4bRJdkhGVyv3GcDgMjmYrrZWinWctR9gnPwA4m5gFeDtIGqOWjZjmA0ZuukDlE3zbUpTylHS0xejLYva90ZumtwyGRU8lKwCUVPrJl8sbTaF3MN7dJszct5wGAh5itsSkCITxHTXlg1RzjeJBgSWDOIg6JlOwf14JOguGKGUKq1wkYh4L1Vo5to50n497yQuwAKS5qVf42MgN7ITFB8RsrEIoiSTLRQvEwiMFRVOO0wynRqXaHrUHu9MD5KFHLIGRMKtwVc5PiP01SS4JPZ9AJ7zLHkllFjXqC7lNQ5r1zhr85ArmI4BLAy4E2lqXwsC2ZW4r2wvG6NZyyGt2z1BFQdS4VdHz6OxqCq4TwU6vAybddnwHqCVaI8FUtjZJ6veWjItn7W84wW3mFEwOmYjK263jSecVxa9WGLvc7S70duS1bpNVpnuLrMxNiTIst34zWsgCFOKmaglpLVyykM1D8geIvXpKo6udqkwqt5bcw2Cg0BWl26mDGcOuUbDNF6xtv1OHiBGTX30tpHtd2CE7alSpA6U0ghe2bcueoNVM7a4IczfbF4RsthTfiNtouJGiVNTI72lBzleypf89kLs6hn9VL7hjG4zxTHy36MhJfgLrSagv02RG0MjGqYzoxBSf1ooPuxLAUovELn9uyQrQDDFwgPVrNo6UD8F0RA8yh2pbXUbsoiPpENSZSjJ4APuDgiENy7mNu8RlUjWqc0AldqeslDLm40p9TP7kIznAEznC21F7w",
       "imagem": "https://ae-pic-a1.aliexpress-media.com/kf/S9695043747b941189d5a7eb04a650549S.jpg",
@@ -29519,6 +29682,10 @@
         [
           "09-26",
           14.23
+        ],
+        [
+          "09-27",
+          24.89
         ]
       ],
       "antes": "",
@@ -31116,6 +31283,14 @@
         [
           "09-27 15:16",
           39.99
+        ],
+        [
+          "09-27 15:24",
+          39.99
+        ],
+        [
+          "09-27 15:29",
+          39.99
         ]
       ],
       "antes": "R$ 41,19",
@@ -32704,6 +32879,14 @@
         ],
         [
           "09-27 15:16",
+          50.29
+        ],
+        [
+          "09-27 15:24",
+          50.29
+        ],
+        [
+          "09-27 15:29",
           50.29
         ]
       ],
@@ -34298,6 +34481,14 @@
         [
           "09-27 15:16",
           35.99
+        ],
+        [
+          "09-27 15:24",
+          35.99
+        ],
+        [
+          "09-27 15:29",
+          35.99
         ]
       ],
       "antes": "",
@@ -35882,6 +36073,14 @@
         ],
         [
           "09-27 15:16",
+          40.69
+        ],
+        [
+          "09-27 15:24",
+          40.69
+        ],
+        [
+          "09-27 15:29",
           40.69
         ]
       ],
@@ -37472,6 +37671,14 @@
         [
           "09-27 15:16",
           13.79
+        ],
+        [
+          "09-27 15:24",
+          13.79
+        ],
+        [
+          "09-27 15:29",
+          13.79
         ]
       ],
       "antes": "R$ 16,26",
@@ -39048,6 +39255,14 @@
         ],
         [
           "09-27 15:16",
+          111.39
+        ],
+        [
+          "09-27 15:24",
+          111.39
+        ],
+        [
+          "09-27 15:29",
           111.39
         ]
       ],
@@ -40637,6 +40852,14 @@
         ],
         [
           "09-27 15:16",
+          143.59
+        ],
+        [
+          "09-27 15:24",
+          143.59
+        ],
+        [
+          "09-27 15:29",
           143.59
         ]
       ],
@@ -42231,6 +42454,14 @@
         [
           "09-27 15:16",
           106.09
+        ],
+        [
+          "09-27 15:24",
+          106.09
+        ],
+        [
+          "09-27 15:29",
+          106.09
         ]
       ],
       "antes": "",
@@ -43815,6 +44046,14 @@
         ],
         [
           "09-27 15:16",
+          102.49
+        ],
+        [
+          "09-27 15:24",
+          102.49
+        ],
+        [
+          "09-27 15:29",
           102.49
         ]
       ],
@@ -45413,6 +45652,14 @@
         [
           "09-27 15:16",
           14.59
+        ],
+        [
+          "09-27 15:24",
+          14.59
+        ],
+        [
+          "09-27 15:29",
+          14.59
         ]
       ],
       "antes": "R$ 18,44",
@@ -47002,6 +47249,14 @@
         [
           "09-27 15:16",
           19.21
+        ],
+        [
+          "09-27 15:24",
+          19.21
+        ],
+        [
+          "09-27 15:29",
+          19.21
         ]
       ],
       "antes": "R$ 22,59",
@@ -48258,64 +48513,54 @@
       return fora;
     }
 
-    var AREA = {
-      "achadinho.make": "Beleza", "achadinhos.instantaneos": "Casa",
-      "fatura.chora": "Eletrônicos", "cozinha.internacional": "Cozinha",
-      "atefalhar": "Fitness", "varredura.carro": "Carro",
-      "varredura.jardim": "Jardim", "varredura.ferramentas": "Ferramentas"
+    var SETORES = {
+      "achadinho.make":          ["Beleza", "Make que viraliza", "O que está em alta no TikTok, pelo menor preço"],
+      "fatura.chora":            ["Tech", "Tech que vale cada real", "Fone, carregador e gadget com preço conferido"],
+      "achadinhos.instantaneos": ["Casa", "Casa mais esperta", "O detalhe que resolve o dia a dia"],
+      "cozinha.internacional":   ["Cozinha", "Cozinha sem esforço", "Utensílio que economiza tempo de verdade"],
+      "atefalhar":               ["Treino", "Treino em casa", "Acessório de academia sem pagar de academia"],
+      "varredura.carro":         ["Carro", "Pro seu carro", "Limpeza, luz e organização"],
+      "varredura.jardim":        ["Jardim", "Jardim & varanda", "Planta viva e varanda bonita"],
+      "varredura.ferramentas":   ["Ferramentas", "Faça você mesmo", "Ferramenta boa sem preço de loja"]
     };
     var ordem = (PRODUTOS_REAIS["_ordem"] || []).concat(
-      Object.keys(AREA).filter(function (k) {
+      Object.keys(SETORES).filter(function (k) {
         return (PRODUTOS_REAIS["_ordem"] || []).indexOf(k) < 0;
-      })).filter(function (k) { return k !== atual && AREA[k]; });
-    var filas = ordem.map(function (k) {
-      return pegar(PRODUTOS_REAIS[k], 8).map(function (p) {
-        return [AREA[k], p];
-      });
+      })).filter(function (k) { return k !== atual && SETORES[k]; });
+    var setores = [];
+    ordem.forEach(function (k) {
+      var itens = pegar(PRODUTOS_REAIS[k], 8);
+      if (itens.length >= 2) setores.push([k, itens]);
     });
+    var doTotal = [];      // o geral ja' esta' dentro dos setores
     var mistura = [];
-    for (var volta = 0; volta < 8; volta++) {
-      filas.forEach(function (f) { if (f[volta]) mistura.push(f[volta]); });
-    }
-    var doTotal = pegar(PRODUTOS_REAIS["_todos"], 12);
-    doTotal.forEach(function (p) { mistura.push(["Achadinhos", p]); });
-    mistura = mistura.slice(0, 16);
+    setores.forEach(function (st) {
+      st[1].forEach(function (p) { mistura.push([st[0], p]); });
+    });
 
-    if (mistura.length) {
-      var sec = el("section", "produtos");
-      var cab = el("div", "cabeca");
-      cab.appendChild(el("h2", null, "Mais achados de hoje"));
-      sec.appendChild(cab);
-      var areas = [];
-      mistura.forEach(function (m) {
-        if (areas.indexOf(m[0]) < 0) areas.push(m[0]);
-      });
-      var g = el("div", "vitrine");
-      var cartoes = mistura.map(function (m) {
-        var c = montarProduto(m[1]);
-        c.dataset.area = m[0];
-        g.appendChild(c);
-        return c;
-      });
-      if (areas.length > 1) {
-        var chips = el("div", "areas");
-        ["Todos"].concat(areas).forEach(function (nome, i) {
-          var b = el("button", "area" + (i ? "" : " ligada"), nome);
-          b.type = "button";
-          b.addEventListener("click", function () {
-            chips.querySelectorAll(".area").forEach(function (x) {
-              x.classList.toggle("ligada", x === b);
-            });
-            cartoes.forEach(function (c) {
-              c.hidden = !(nome === "Todos" || c.dataset.area === nome);
-            });
-          });
-          chips.appendChild(b);
+    if (setores.length) {
+      var nav = el("nav", "areas");
+      nav.setAttribute("aria-label", "Categorias");
+      outros.appendChild(nav);
+      setores.forEach(function (st) {
+        var info = SETORES[st[0]];
+        var sec = el("section", "produtos setor");
+        sec.id = "setor-" + info[0].toLowerCase();
+        var cab = el("div", "cabeca");
+        cab.appendChild(el("h2", null, info[1]));
+        cab.appendChild(el("p", "apoio", info[2]));
+        sec.appendChild(cab);
+        var g = el("div", "vitrine trilho-setor");
+        st[1].forEach(function (p) { g.appendChild(montarProduto(p)); });
+        sec.appendChild(g);
+        outros.appendChild(sec);
+        var b = el("button", "area", info[0]);
+        b.type = "button";
+        b.addEventListener("click", function () {
+          sec.scrollIntoView({ behavior: "smooth", block: "start" });
         });
-        sec.appendChild(chips);
-      }
-      sec.appendChild(g);
-      outros.appendChild(sec);
+        nav.appendChild(b);
+      });
     }
 
     var naTela = document.querySelectorAll(
